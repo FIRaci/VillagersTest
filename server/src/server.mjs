@@ -177,7 +177,18 @@ function computeLiveScores() {
     try {
       const m1 = market.evaluate_first_market(p);
       const m2 = market.evaluate_second_market(p);
-      const silverBreakdown = market.evaluate_silver_breakdown(p);
+      const villageArr = p.village.toArray ? p.village.toArray() : (p.village || []);
+      const silverBreakdown = [];
+      for (const card of villageArr) {
+        if (card.silver_formula && !(card.silver_formula instanceof None)) {
+          silverBreakdown.push({
+            code: card.code,
+            name: card.name,
+            points: card.code === 'LogRafter' ? 3 : 2,
+            reason: 'Điểm thưởng thẻ Bạc'
+          });
+        }
+      }
       scores[p.id] = {
         playerId: p.id,
         supplyGold: p.supply_gold,
