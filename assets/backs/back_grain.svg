@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 400" width="250" height="400">
+  <defs>
+    <!-- Linen Paper Texture Gradient -->
+    <linearGradient id="cardPaper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#faf6ee"/>
+      <stop offset="100%" stop-color="#f3ede0"/>
+    </linearGradient>
+
+    <!-- House Drop Shadow -->
+    <filter id="houseShadow" x="-15%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- Icon Halo -->
+    <filter id="iconHalo" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Card Base with Rounded Corners -->
+  <rect x="2" y="2" width="246" height="396" rx="14" fill="url(#cardPaper)" stroke="#d8cfbe" stroke-width="2"/>
+  
+  <!-- Inner Stitched / Inset Border -->
+  <rect x="10" y="10" width="230" height="380" rx="10" fill="none" stroke="#2ea692" stroke-width="1.5" stroke-opacity="0.45" stroke-dasharray="5 3"/>
+
+  <!-- Suit Vietnamese Title -->
+  <text x="125" y="48" font-family="'Cinzel', 'Alegreya SC', Georgia, serif" font-size="20" font-weight="900" fill="#2ea692" text-anchor="middle" letter-spacing="2.5">LÚA MÌ</text>
+
+  <!-- Suit English Subtitle -->
+  <text x="125" y="70" font-family="'Cinzel', 'Alegreya SC', Georgia, serif" font-size="11" font-weight="700" fill="#2ea692" fill-opacity="0.65" text-anchor="middle" letter-spacing="4">GRAINS</text>
+
+  <!-- Iconic House Silhouette with Chimney -->
+  <g filter="url(#houseShadow)">
+    <!-- Chimney -->
+    <rect x="148" y="108" width="16" height="40" rx="2" fill="#2ea692"/>
+    <!-- House Body and Gable Roof -->
+    <path d="M 125 102 L 190 172 L 178 172 L 178 296 L 72 296 L 72 172 L 60 172 Z" fill="#2ea692"/>
+  </g>
+
+  <!-- Center Circular Icon Well -->
+  <circle cx="125" cy="226" r="43" fill="#ffffff" fill-opacity="0.96" stroke="#2ea692" stroke-width="3" filter="url(#iconHalo)"/>
+
+  <!-- High-res Suit Emblem Icon -->
+  <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAABwlBMVEUAAAD////////+///////////////////////////////////////////////////////////////////////8/v7////////+/v7+///+//+1rm6l1tG/4t6p2NO94d2h1c+r2dS33tq13dmv29aZ0syU0Mmt2tWc082X0cvMxYGwqW+n19Ke1M6Sz8ix3Ne64NyDysDB4t+MzcWKzMSz3NiOzsaGy8LG5OGj1dD65W13xrq439vEvXnD5OCIzMN5x7zMxYDHwH60rG7r9vTh8e+Qz8eAyb/5/fzu9/bJ5uOauZX1+vrm8/L86W3752zj8vDe7+3T6ujO6OV+yL58x7yyq2/W7OmXu5qyr3Tx+Pja7uzY7evH5eJyxLmDu63Gv33z+fnQ6eeLzcWitovv3nL3+/vo9PPL5+SJx7zEvHyvsXmNkHL05HHy4HF8yL5vw7iBw7WAvrCGwayNvqWRvJ6qs4DAtW+d1M2MxLOzxpmdt5Df03q6snKYl3GHt6emw6Cux5+Gq5igt46JmoHKw3+/t3bw4HKkoHGcmXCtpm/8627k1G7PwW55w7OWwayuxJmJlnzQxXitqXbLv2/XyW4oFmWGAAAAG3RSTlMA8wX+LMH63berpJeVgmVjOSMZDgH60OTk0OS50ArbAAAFdUlEQVRIx52W918ScRjHIUTL1LRdtw9u0Q3uWMcISJEVLhA1xUItt5W7vfee/2/P99QGSL1efe7l/YDfN8/keb62Oh1o6mhzttgdDnuLs62j6UDt/+vPt5+0T6UG5wZBfYO5KfvJ9r9SxzsP2bO9xXw+bxoGQRBx0ywN5eyHOo83IrpamwGIxynKy7rgYVkvRRjxyb4TrV37+3TkVDZVyROsy+UWGEZAjzvgYoEanTp9ZB/vjh1uHh8qmV5NYEgZD9Pw4LhMAubyEmDo8LFa4uhBR27U9LKCjNMix0mWOFFRaJxxs5Qxmj14tIZwZvumDVZjwqKkpoM+P8g34wuqKi/SuACGprPOP5hjB7O9eW+AwUXeF8pcsbS2tra6urqw4OclmtRYopQ6+JtvBw47euOsm6SloH7lybPl5Qev3mzff/9++9Xr5eUnC35JId1svDR7+FcOjjTnpr0aEP6Hz5bfbL9biQxE+vvfDkQiK+++Pfj80CfRjJsyR08c+VmPU4Wi6WLCXPDR19ff3/YP9Ef6IwMDQADYv7L94GOQwxmNMlNnu3Zr3uoYmqTcssj7H1e/rKDTERC8ABmIXLv3/FFCFXEBXCu07vRBZ3NqmrKM6Hc83Yv3roNeXn+5cg3p3oXuxepjPcjRjOaNT5/otGI/lJ3Is25Z4f3DdzyeC4vV7j1Vq9XFxW6P586wj6dlwWWYc4dQBprsfUVKg/yqoeTG/W6ALHl2Xh6kT8lQmguTWixesjcB0u4YjbsgwVwwVN7EsBfPPTWqvtiMhoISMkNN5trBr5PjKBIZ1SR5EcNGsPN/6j6G3Y3qPkmEpMXMvjMHkF9mTCNxhffp0asYdg6rEXywdTkzAwjpdhEV8KzDUTGgGcPQKpnLDZBLH4b9PAeeBajibIetrZCnXIJMc2oic3kL66lHejBsvZxQORqHPJcKbTbnuIn6kRbVxPDlJWykpxbpGcGwjXIiLSGELfU5bS05wkI4hFyy/Kr37GISUqagYPKDLTZ7yvAGSAu5cbMRglLGi2HUz712mwMQDSHpUGPkaTTj52/hJDRAr8PmmDPYABMGK6FyQ+RqNDPDoyyz1JDDZp+Lx1wMrjS00oMQyzGrMEN2CN+krIwFrfBH6pGRXUTZQVpszqlJIkDKEAvUZaneipX2p3tWWGLCaWubnQcrUH11Ro9u1SPWJ2NJqy+hyYhcGzTMPFSfRA2jl682QNZvoOrL7oDXGO+AtpwgYLjAOAqGkmP1CIp+KZrxQY8J0P15exM0f4qIaYyMCjO8fgk6qiaUEeSXHoRQmECMqEDz29pnTcszjvfr0bvwpXVdubQ6jPwi0XSea7d+yKNosuKKBD/LNWwfZKusB6VbYMRLzINfaFykDIhGpkV+JjR2bqQ+lqUFPwoeIomnYFxYQ2kCmlmQwbX0wu31jc2xsYt7Ghvb3Lh9W1UlBc0+o9LcuTv6skWC1UjoM96X0DNJpGiyHAUNlzO6Dwa5VUbDhNG3N2CnTAolWhH5tD8R0vWQDspkQqCEP62KShjFbvSd7vo1xgcNKuAmZQW2i6rurJcZn9/nCwbTvMQBIUDhYYz/viygngGBhBzAAuN54NK8yoMkAGhcRkQelsXvK8lRJGKBAAMBKaLIgST0Fm+JCCCFAEtMwkr6c/EVSgTFagKJ4zhNK7ui6bAsow0bo/IpZ+2yhNVnUDHY3yRsZBm3JMskKQgaG6OISgHWa90SP5GbB0MuDW19hiTRHzLggvuCiZb4/lcFWE1UjHUFNLclOI8sxCcKcFVodCEpVEyCoLxeloXTcBwsEMVcc2vX364944NFRIHgNGHMj1rXnn9drgpTvUO9oKGJ8XH7mbrL1X9c4X4ACMV/uTcO1LEAAAAASUVORK5CYII=" x="90" y="191" width="70" height="70"/>
+
+  <!-- Bottom Accent / Decorative Dot -->
+  <circle cx="125" cy="352" r="4" fill="#2ea692" fill-opacity="0.6"/>
+  <line x1="65" y1="352" x2="105" y2="352" stroke="#2ea692" stroke-width="1.5" stroke-opacity="0.4" stroke-linecap="round"/>
+  <line x1="145" y1="352" x2="185" y2="352" stroke="#2ea692" stroke-width="1.5" stroke-opacity="0.4" stroke-linecap="round"/>
+</svg>

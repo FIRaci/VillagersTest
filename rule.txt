@@ -1,0 +1,528 @@
+Tôi đã tổng hợp toàn bộ nội dung từ file PDF gốc (`villagers_rulebook_revised_low.pdf`) và nguồn tham khảo trực tuyến (`yucata.de`). Dưới đây là bản dịch và diễn giải chi tiết, đầy đủ tất cả các quy tắc và danh sách thẻ bài của game **Villagers**, được trình bày rõ ràng theo từng phần.
+
+---
+
+# TỔNG QUAN
+
+**Villagers** là một trò chơi board game của tác giả **Haakon Hoel Gaarder**, do **Sinister Fish Games** phát hành. Người chơi là những người sáng lập ngôi làng trong thời Trung cổ, sau đại dịch hạch. Nhiệm vụ của bạn là chiêu mộ dân làng từ con đường (Road), xây dựng chuỗi sản xuất (Production Chains), và kiếm nhiều Vàng (Gold) nhất để giành chiến thắng.
+
+Mục tiêu: **Thu thập nhiều Vàng nhất** sau khi trò chơi kết thúc (sau Giai đoạn Chợ lần 2).
+
+---
+
+# THÀNH PHẦN TRÒ CHƠI
+
+| Thành phần | Số lượng |
+|---|---|
+| Thẻ Quảng trường Làng (Village Square) | 5 |
+| Thẻ Trợ giúp Người chơi (Player Aid) | 5 |
+| Thẻ Người Sáng lập (Founders) | 5 |
+| Dân làng Khởi đầu trên Đường (Starting Road Villagers) | 6 |
+| Dân làng Cơ bản (Lumberjack, Miner, Hayer) | 30 (10 mỗi loại) |
+| Dân làng Khác | 94 |
+| Thẻ Chợ (Market Cards) | 2 |
+| Thẻ Người chơi Đầu tiên (First Player Card) | 1 |
+| Thẻ Kết thúc Giai đoạn Nháp (End of Draft Phase Card) | 1 |
+| Đồng xu Vàng (Coins) | 150 |
+| **Chế độ Solo** | |
+| Thẻ Sự kiện (Event Cards) | 24 |
+| Thẻ Nữ Bá tước (Countess Card) | 1 |
+| Thẻ Chú hề (Jester Card) | 1 |
+
+---
+
+# CÁCH THIẾT LẬP (SETUP)
+
+1. **Đường (Road):** Tìm 6 Dân làng Khởi đầu (có ký hiệu biển chỉ đường) và đặt ngửa thành một hàng ở giữa bàn. Đây là "Road".
+2. **Dân làng Cơ bản:** Tìm 10 Hayer, 10 Lumberjack, 10 Miner và đặt ngửa thành từng chồng riêng biệt.
+3. **Người Sáng lập:** Mỗi người chơi nhận 1 thẻ Founders, đặt mặt có 2 Vàng ngửa lên. Thẻ này là khởi đầu của mỗi Làng.
+4. **Quảng trường Làng:** Mỗi người chơi nhận 1 thẻ Village Square, đặt cạnh Làng của mình.
+5. **Nguồn cung cấp:** Mỗi người chơi nhận **8 Vàng** (gọi là Supply). Số Vàng còn lại đặt vào Khu vực Ngân hàng (Bank) cạnh Road.
+6. **Người chơi Đầu tiên:** Trao thẻ First Player Card cho người đã sống ở cùng một nơi lâu nhất.
+7. **Loại bỏ thẻ (2-3 người chơi):** Loại bỏ các thẻ có ký hiệu `4+` (thuộc bộ Wool và Leather).
+8. **Chồng bài:** Xáo trộn các thẻ còn lại và tạo **6 chồng úp**, mỗi chồng có số thẻ bằng **gấp đôi số người chơi**. (Ví dụ: 5 người chơi → 6 chồng, mỗi chồng 10 thẻ). Xếp 6 chồng này phía trên các Dân làng Khởi đầu.
+9. **Thẻ Chợ:** Đặt Thẻ Chợ Thứ nhất bên dưới chồng thứ 2, Thẻ Chợ Thứ hai bên dưới chồng thứ 6. Road đã hoàn thành.
+10. **Bài trên tay:** Từ các thẻ còn lại, chia úp cho mỗi người chơi **5 thẻ**. Đây là bài trên tay (Player Hand).
+11. **Dự trữ (Reserve):** Số thẻ còn lại đặt thành một chồng úp cạnh Road. Đây là Reserve.
+
+**Lưu ý:** Trong game 2 người chơi, có quy tắc khác ở Giai đoạn Cập nhật Road (xem bên dưới).
+
+---
+
+# CÁC KÝ HIỆU TRÊN THẺ DÂN LÀNG
+
+- **Suit Symbol (Ký hiệu Bộ):** Cho biết dân làng thuộc 1 trong 9 bộ. Hầu hết dân làng phải được đặt lên trên các dân làng cùng bộ.
+- **Card Stacking Hint (Gợi ý xếp chồng):** Cho biết có bao nhiêu dân làng có thể xếp lên trên thẻ này.
+- **Production Chain Text (Văn bản Chuỗi Sản xuất):** Cho biết dân làng này phải được đặt lên trên những ai, và những ai có thể đặt lên trên nó.
+- **Villager Name (Tên Dân làng):** Nghề nghiệp của dân làng.
+- **Gold Symbol (Ký hiệu Vàng):** Số Vàng dân làng này kiếm được trong Giai đoạn Chợ. Vàng là điểm chiến thắng.
+- **Banner (Biểu ngữ):** Tên của bộ. Chỉ những dân làng có thể đặt thẳng lên bàn mà không cần ai bên dưới mới có banner.
+- **Padlock (Ổ khóa):** Cho biết dân làng này có Ổ khóa (xem phần Padlock).
+- **Unlocking Symbol (Ký hiệu Mở khóa):** Tên dân làng có thể mở khóa Ổ khóa này.
+- **Silver Formula (Công thức Bạc):** Mô tả số điểm có điều kiện trong Giai đoạn Chợ Thứ hai.
+- **Keyring Symbol (Ký hiệu Chùm chìa khóa):** Cho biết có bao nhiêu dân làng khác có thể được mở khóa bởi dân làng này.
+- **Signpost Symbol (Ký hiệu Biển chỉ đường):** Cho biết đây là 1 trong 6 dân làng khởi đầu trên Road.
+- **Card backs (Mặt sau thẻ):** Cho biết bộ của dân làng. Hữu ích khi nháp bài úp.
+- **Discard Symbol (Ký hiệu Loại bỏ):** Cho biết thẻ này bị loại bỏ sau khi chơi.
+
+---
+
+# LUỒNG TRÒ CHƠI
+
+Mỗi ván gồm nhiều **Vòng (Rounds)**. Mỗi vòng có 2 giai đoạn chính:
+1. **Giai đoạn Nháp (Draft Phase):** Người chơi nháp dân làng từ Road.
+2. **Giai đoạn Xây dựng (Build Phase):** Người chơi đặt dân làng từ tay vào Làng.
+
+Ngoài ra còn có **2 Giai đoạn Chợ (Market Phases)** xen kẽ, nơi người chơi kiếm Vàng.
+
+---
+
+## 1. GIAI ĐOẠN NHÁP (DRAFT PHASE)
+
+- Người chơi lần lượt nháp dân làng từ Road theo chiều kim đồng hồ. Người có thẻ First Player đi trước.
+- **Giới hạn Nháp (Drafting Limit):** Bạn phải nháp **2 dân làng + 1 cho mỗi Food** trong Làng của mình. Tối đa là **5 dân làng** dù có nhiều hơn 3 Food.
+- Bạn có thể nháp:
+  - Một thẻ **ngửa** từ Road (nếu có đồng xu trên đó, lấy đồng xu vào Supply).
+  - Hoặc một thẻ **úp** từ bất kỳ chồng nào trên Road (sau đó lật ngửa và đặt lên Village Square).
+- Khi nháp thẻ ngửa, ngay lập tức thay thế bằng thẻ trên cùng của chồng bên trái nhất.
+- **Không** nháp hoặc di chuyển Thẻ Chợ.
+- Khi một chồng hết bài, chồng đó không còn trong game.
+- Khi tất cả các chồng đã hết, dùng thẻ từ **Reserve** để thay thế. Người chơi chỉ được nháp thẻ úp từ Reserve khi tất cả các chồng khác đã hết.
+- Các thẻ đã nháp được đặt ngửa lên Village Square. Khi đạt giới hạn, lấy tất cả bài mới vào tay và dừng nháp.
+
+### Cập nhật Road (sau khi tất cả nháp xong)
+
+**Với 3+ người chơi:**
+1. Loại bỏ tất cả dân làng trên Road có đồng xu.
+2. Thay thế bằng thẻ mới từ Reserve (hoặc từ chồng bên trái nhất nếu Reserve hết).
+3. Đặt **1 Vàng** lên mỗi dân làng ngửa trên Road.
+4. Bắt đầu Giai đoạn Xây dựng.
+
+**Với 2 người chơi:**
+1. Theo thứ tự ngược, mỗi người chơi có thể đặt **1 Vàng** từ Bank lên một dân làng ngửa trên Road (có thể đặt lên cùng một dân làng hoặc không đặt).
+2. Loại bỏ tất cả dân làng ngửa trên Road **không có đồng xu**.
+3. Thay thế bằng thẻ mới từ Reserve.
+4. Bắt đầu Giai đoạn Xây dựng.
+- Các thẻ có đồng xu có thể ở lại nhiều vòng, và đồng xu có thể tích lũy trên cùng một dân làng.
+
+---
+
+## 2. GIAI ĐOẠN XÂY DỰNG (BUILD PHASE)
+
+- Người chơi lần lượt đặt dân làng từ tay vào Làng của mình. Mỗi người chơi hoàn thành tất cả hành động của mình trước khi chuyển lượt.
+- **Giới hạn Xây dựng (Build Limit):** Mặc định **2 dân làng + 1 cho mỗi Builder** trong Làng. Tối đa là **5 dân làng**.
+- Bạn có thể đặt ít hơn giới hạn nếu muốn.
+- Trước khi đặt, thông báo cho người khác số lượng dân làng bạn sẽ đặt.
+
+### Chuỗi Sản xuất (Production Chains)
+- Nếu một dân làng có **Production Chain Text**, nó phải tạo thành một phần của Chuỗi Sản xuất khi được đặt.
+- Các dân làng được liệt kê trước tên của nó phải được đặt bên dưới theo đúng thứ tự.
+- Khi đặt chồng lên nhau, đặt sao cho mọi thứ **bên dưới tên** của thẻ bên dưới bị che đi. Các ký hiệu bị che sẽ không còn hiệu lực.
+- Chuỗi Sản xuất không cần hoàn thành ngay lập tức. Bạn có thể xây dựng qua nhiều lượt.
+- Dân làng đầu tiên trong Chuỗi Sản xuất có thể có **tối đa 2 dân làng** đặt lên trên, tạo thành 2 nhánh.
+- Bạn được phép có 2 hoặc nhiều hơn cùng một dân làng trong làng.
+
+### Nhận Dân làng Cơ bản (Basic Villagers)
+- Lumberjack, Hayer, Miner là Dân làng Cơ bản.
+- Để nhận một Dân làng Cơ bản: Trả một dân làng từ tay về một chồng trên Road, sau đó lấy một Dân làng Cơ bản bất kỳ và đặt vào Làng.
+- Bạn có thể làm điều này **tối đa 3 lần** mỗi Giai đoạn Xây dựng. Việc này **không tính** vào Giới hạn Xây dựng.
+- Nếu các chồng trên Road đã hết, trả về Reserve. Nếu Reserve cũng hết, loại bỏ thẻ đã trả.
+
+### Ổ khóa (Padlocks)
+- Khi chơi một dân làng có **Padlock**, bạn phải mở khóa nó trước.
+- Kiểm tra xem bạn hoặc người chơi khác có **Unlocking Villager** được ghi bên cạnh không.
+  - Nếu **bạn có** Unlocking Villager trong Làng của mình: Đặt **2 Vàng từ Bank** lên dân làng đó.
+  - Nếu **người chơi khác có**: Trả **2 Vàng từ Supply** của bạn lên dân làng đó.
+  - Nếu **không ai có**: Trả **2 Vàng từ Supply** của bạn vào Bank.
+- Nếu có nhiều bản sao của Unlocking Villager, bạn chọn người để trả.
+- Bạn có thể sử dụng dân làng vừa đặt trong Giai đoạn Xây dựng hiện tại để mở khóa dân làng khác.
+
+### Chơi Dân làng Đặc biệt (Special Villagers)
+- Dân làng Đặc biệt (màu đỏ) cung cấp các hành động đặc biệt mạnh mẽ. Luật được in trên thẻ.
+- Những thẻ có **Discard Symbol** bị loại bỏ ngay sau khi sử dụng, **không tính** vào Giới hạn Xây dựng. Bạn có thể chơi bao nhiêu tùy thích.
+- Những thẻ **không có** Discard Symbol (như Monk) **có tính** vào Giới hạn Xây dựng.
+- Dân làng Đặc biệt **không thể** được dùng để lấy cắp Founders của người chơi khác.
+
+### Kết thúc Giai đoạn Xây dựng
+- Nếu sau Giai đoạn Xây dựng, bạn **không có Food** trong Làng, bạn phải lật thẻ Founders sang mặt có 1 Food. Một khi đã lật, không bao giờ lật lại mặt Vàng.
+- Thẻ First Player được chuyển cho người chơi bên trái.
+- Bắt đầu Giai đoạn Nháp tiếp theo, trừ khi có Giai đoạn Chợ được kích hoạt.
+
+---
+
+## 3. GIAI ĐOẠN CHỢ (MARKET PHASES)
+
+### Giai đoạn Chợ Thứ nhất
+- Xảy ra khi **hai chồng đầu tiên** trên Road (bên trái nhất) đã hết.
+- Diễn ra sau Giai đoạn Xây dựng của vòng đó.
+- Tất cả người chơi kiếm Vàng bằng:
+  - Tổng các **Gold Symbol** in trên các thẻ trong Làng (chỉ tính thẻ trên cùng của mỗi Chuỗi Sản xuất).
+  - Cộng với Vàng từ các **đồng xu** đặt trên các dân làng.
+- **Không** lấy đồng xu ra khỏi thẻ (sẽ được tính lại ở Giai đoạn Chợ Thứ hai).
+- **Silver Symbol không** được tính trong giai đoạn này.
+- Sau khi tất cả người chơi nhận Vàng, loại bỏ Thẻ Chợ Thứ nhất và bắt đầu Giai đoạn Nháp tiếp theo.
+
+### Giai đoạn Chợ Thứ hai
+- Xảy ra khi **tất cả các chồng** trên Road đã hết.
+- Diễn ra sau Giai đoạn Xây dựng của vòng đó.
+- Tương tự Giai đoạn Chợ Thứ nhất, nhưng **Silver Symbol cũng được tính**.
+- Trong giai đoạn tính điểm cuối cùng này, các đồng xu trên dân làng có thể được tính bằng cách di chuyển chúng vào Supply của mỗi người chơi.
+- **Lưu ý:** Tính Silver Symbol trước khi di chuyển đồng xu, vì nó có thể ảnh hưởng đến việc tính điểm của các thẻ như Agent.
+
+### Silver Symbols
+- Một số thẻ có **Silver Symbol** và mô tả số Vàng có điều kiện.
+- Chỉ tính dân làng của **chính bạn**.
+- Food, Builders và Gold Symbols bị che bởi thẻ khác **không** được tính.
+- Suit Symbols và Padlocks trên đầu thẻ **luôn được tính**.
+- Một số thẻ Đặc biệt và Silver yêu cầu tính theo "giá trị Vàng in trên thẻ", nghĩa là **không** bao gồm đồng xu đặt trên dân làng đó.
+
+---
+
+## KẾT THÚC TRÒ CHƠI
+
+- Sau Giai đoạn Chợ Thứ hai, trò chơi kết thúc.
+- **Người thắng cuộc** là người có **nhiều Vàng nhất** trong Supply.
+- Nếu hòa, người có **ít dân làng nhất** trong Làng thắng.
+
+---
+
+# CHẾ ĐỘ SOLO
+
+## Tổng quan
+Bạn chống lại **Nữ Bá tước (The Countess)**. Bà ta có làng riêng, không có bài trên tay, và sử dụng bộ bài Sự kiện (Events) để chống lại bạn.
+
+## Thiết lập
+- Như game 2 người, nhưng:
+  1. **Loại bỏ tất cả thẻ thuộc bộ Special.**
+  2. Mỗi chồng trên Road có **5 thẻ** thay vì 4.
+  3. Đặt thẻ **Jester** cạnh Village Square của bạn.
+  4. Xáo trộn bộ **Summer Events** và **Winter Events** riêng biệt. Đặt úp. Lật 1 thẻ Summer Event ngửa cạnh Road (có hiệu lực vòng 1).
+  5. Thay thế một người chơi bằng **The Countess**:
+     - Thẻ Countess là khởi đầu Làng của bà ta (mặt 4 Vàng ngửa).
+     - Bà ta có **1 Vàng** trong Supply.
+     - Bà ta **không có bài trên tay**.
+
+## Luật Solo
+
+### Giai đoạn Nháp
+- Mỗi khi bạn nháp một thẻ từ Road, bạn cũng phải đặt một dân làng ngửa **bất kỳ** từ Road vào Làng của Countess (Countess xây dựng trong Giai đoạn Nháp!).
+- Dân làng của Countess **bỏ qua** Chuỗi Sản xuất và Padlock.
+- Countess **không** đặt Vàng lên Road.
+- Nếu Countess nhận được dân làng có đồng xu, bà ta lấy đồng xu vào Supply.
+
+### Giai đoạn Sự kiện (Event Phase)
+- Sau Giai đoạn Xây dựng, trước Giai đoạn Chợ (nếu có).
+- **Bước 1:** Giải quyết tất cả Sự kiện ngửa. Loại bỏ chúng sau khi giải quyết.
+- **Bước 2:** Countess lấy thẻ trên cùng của Reserve vào làng.
+- **Bước 3:** Dựa trên giá trị Vàng/Bạc của dân làng đó, chia thêm Sự kiện:
+  - Giá trị **10 Vàng trở lên**: chia **1** Sự kiện.
+  - Giá trị **1-9 Vàng**: chia **2** Sự kiện.
+  - Giá trị **0 Vàng**: chia **3** Sự kiện.
+- **Chuyển mùa:** Dùng Summer Events cho đến khi Giai đoạn Chợ Thứ nhất kết thúc. Sau đó dùng Winter Events.
+
+### Các quy tắc khác
+- **Jester:** Có thể chơi bất cứ lúc nào để loại bỏ 1 Sự kiện (chưa được giải quyết). Chỉ dùng được 1 lần. Không thể đổi lấy Dân làng Cơ bản.
+- **Giai đoạn Chợ:** Countess tính điểm như người chơi bình thường (bao gồm Silver Symbol ở Chợ Thứ hai).
+- **Vòng cuối:** Countess không lấy thẻ từ Reserve.
+- **Thắng:** Bạn thắng nếu có nhiều Vàng hơn Countess.
+- **Chế độ Dễ (Beginner):** Chỉ chia 1 Sự kiện mỗi vòng; lật thẻ Countess sang mặt không Vàng; loại bỏ sự kiện "-It Was You!".
+- **Chế độ Khó (Hard):** Chia 2 Sự kiện đầu game; loại bỏ Jester; loại bỏ "-It Was You!"; Countess khởi đầu với 10 Vàng.
+
+---
+
+# DANH SÁCH THẺ BÀI (BASE SET)
+
+Mỗi thẻ xuất hiện **2 lần**, trừ Founders (1/người) và Basic Villagers (10 mỗi loại).
+
+### Founders
+- Bắt đầu Chuỗi Sản xuất **Grain**.
+- Hai mặt: mặt 2 Vàng / mặt 1 Food.
+- Mỗi người chơi có một hình minh họa khác nhau, không khác biệt về chức năng.
+
+### Lumberjack (Basic)
+- Bắt đầu Chuỗi Sản xuất **Wood**.
+- Hai mặt (nam/nữ).
+
+### Hayer (Basic)
+- Bắt đầu Chuỗi Sản xuất **Hay**.
+- Hai mặt (nam/nữ).
+
+### Miner (Basic)
+- Bắt đầu Chuỗi Sản xuất **Ore**.
+- Hai mặt (nam/nữ).
+
+### Brewer
+- **1 Food, 1 Builder**
+- Đặt lên: Founders
+- Được mở khóa bởi: Cooper
+- Mở khóa: Freemason
+
+### Poulterer
+- **1 Food, 3 Gold**
+- Đặt lên: Founders
+- Được mở khóa bởi: Carpenter
+
+### Swineherd
+- **1 Food, 2 Gold**
+- Đặt lên: Founders
+- Trước: Truffler
+
+### Truffler
+- **1 Food, 8 Gold**
+- Đặt lên: Swineherd
+- Được mở khóa bởi: Hunter
+
+### Cartwright
+- **9 Gold**
+- Đặt lên: Wheeler
+- Mở khóa: Peddler
+
+### Log Rafter
+- **2 Wood Symbols**
+- Silver: 1 Gold cho mỗi Wood Symbol
+- Đặt lên: Lumberjack
+
+### Wheeler
+- **3 Gold**
+- Đặt lên: Lumberjack
+- Trước: Cartwright
+
+### Wood Carver
+- Silver: Tổng tất cả Gold Symbol in trên dân làng **Wood** của bạn.
+- Đặt lên: Lumberjack
+
+### Bed Builder
+- **4 Gold, 2 Hay Symbols**
+- Đặt lên: Hayer
+- Được mở khóa bởi: Carpenter
+
+### Fromager
+- **1 Food, 15 Gold**
+- Đặt lên: Milk Maid
+
+### Grazier
+- **1 Food**
+- Đặt lên: Hayer
+- Trước: Milk Maid
+
+### Horse Trader
+- Silver: 3 Gold cho mỗi 2 Hay Symbols (làm tròn xuống)
+- Đặt lên: Hayer
+
+### Milk Maid
+- **2 Food**
+- Đặt lên: Grazier
+- Trước: Fromager
+- Được mở khóa bởi: Cooper
+
+### Ore Muler
+- Silver: 3 Gold cho mỗi 2 Ore Symbols (làm tròn xuống)
+- Đặt lên: Hayer
+
+### Peddler
+- Silver: 3 Gold cho mỗi 2 **Gold Symbols** (làm tròn xuống)
+- Đặt lên: Hayer
+- Được mở khóa bởi: Cartwright
+
+### Thatcher
+- **1 Builder, 2 Gold**
+- Đặt lên: Hayer
+
+### Glass Blower
+- **4 Gold, 2 Ore Symbols**
+- Đặt lên: Miner
+- Được mở khóa bởi: Blacksmith
+- Mở khóa: Wine Trader
+
+### Jeweler
+- **20 Gold**
+- Đặt lên: Spelunker
+- Được mở khóa bởi: Blacksmith
+
+### Locksmith
+- Silver: 2 Gold cho mỗi Padlock Symbol
+- Đặt lên: Miner
+- Được mở khóa bởi: Blacksmith
+
+### Mason
+- **1 Builder, 2 Gold**
+- Đặt lên: Miner
+
+### Seeker
+- Trước: Spelunker
+- Đặt lên: Miner
+
+### Spelunker
+- **10 Gold**
+- Đặt lên: Seeker
+- Trước: Jeweler
+- Được mở khóa bởi: Chandler
+
+### Graper
+- **1 Food**
+- Bắt đầu Chuỗi Sản xuất **Grape**
+
+### Wine Trader
+- **14 Gold**
+- Đặt lên: Vintner
+- Được mở khóa bởi: Glass Blower
+
+### Shepherd
+- **1 Food**
+- Bắt đầu Chuỗi Sản xuất **Wool**
+
+### Spinner
+- **4 Gold**
+- Đặt lên: Shepherd
+- Trước: Weaver
+
+### Tailor
+- **24 Gold**
+- Đặt lên: Weaver
+
+### Cobbler
+- **6 Gold**
+- Đặt lên: Tanner
+- Được mở khóa bởi: Blacksmith
+
+### Saddler
+- **5 Gold**
+- Đặt lên: Tanner
+
+### Tanner
+- **2 Gold**
+- Bắt đầu Chuỗi Sản xuất **Leather**
+
+### Agent
+- Silver: Vàng bằng giá trị đồng xu đặt trên một dân làng của bạn (bạn chọn).
+
+### Beekeeper
+- **4 Gold**
+- Được mở khóa bởi: Carpenter
+
+### Chandler
+- **3 Gold, 2 Solitary Symbols**
+
+### Fisher
+- **1 Food, 3 Gold**
+- Được mở khóa bởi: Shipwright
+
+### Freemason
+- Silver: 3 Gold cho mỗi Builder
+- Được mở khóa bởi: Brewer
+
+### Grocer
+- Silver: 3 Gold cho mỗi Food
+- Được mở khóa bởi: Harvester
+
+### Harvester
+- **1 Food**
+- Mở khóa: Grocer
+
+### Hunter
+- **1 Food**
+- Mở khóa: Truffler
+
+### Priest
+- Silver: 3 Gold cho mỗi 2 Solitary Symbols (làm tròn xuống)
+- Được mở khóa bởi: Chandler
+
+### Wattler
+- **1 Builder**
+
+### Apprentice (Special)
+- Thay thế bất kỳ dân làng **không phải Top Villager** trong bất kỳ làng nào bằng Apprentice, sau đó đặt dân làng bị thay thế vào làng của bạn.
+- Không thể dùng để lấy cắp Founders của người khác.
+- Có thể dùng trên Founders của chính bạn nếu nó có ít nhất 1 thẻ lên trên.
+
+### Monk (Special)
+- Có thể dùng như bất kỳ dân làng nào trong Chuỗi Sản xuất, miễn là **không** phải thẻ trên cùng.
+- 2 Monk có thể dùng trong cùng một Chuỗi Sản xuất.
+- Nếu Monk trở thành thẻ trên cùng, nó trở về tay người chơi.
+- Nếu Monk là thẻ dưới cùng, nó có thể có 2 thẻ lên trên (cùng bộ).
+
+### Smuggler (Special)
+- Kiếm một nửa giá trị Vàng in trên một dân làng trong làng của bạn (làm tròn lên).
+- Loại bỏ sau khi dùng.
+- Được mở khóa bởi: Shipwright
+
+### Tinner (Special)
+- Mở khóa **miễn phí** tất cả Padlock trên bất kỳ dân làng nào được chơi cùng lượt với Tinner.
+- Loại bỏ sau khi dùng.
+
+---
+
+# BỘ MỞ RỘNG KICKSTARTER (TÓM TẮT)
+
+### Saints
+- 5 thẻ Special, mỗi người nhận 1 đầu game.
+- **Benefactor:** Chơi 1 dân làng từ tay vào làng (không phải Special). Loại bỏ sau khi dùng.
+- **Nun:** Cuối game, nhận Vàng bằng giá trị Silver của một dân làng mà bạn có đúng 1 bản.
+- **Pigeoneer:** Xem 6 thẻ trên cùng của Reserve, lấy 1 vào tay. Loại bỏ sau khi dùng.
+- **Prophet:** Chơi trong Giai đoạn Nháp. Xem một chồng trên Road và nháp 1 thẻ từ đó. Loại bỏ sau khi dùng.
+- **Recruiter:** Mỗi lượt Nháp, trả 1 Vàng để nháp 2 dân làng. Giới hạn Food vẫn áp dụng.
+
+### Scoundrels
+- 7 thẻ Special. Sheriff và Thief x2 (chỉ dùng khi 4+ người). 5 thẻ còn lại chia ngẫu nhiên.
+- **Barbarian:** Chơi trong Giai đoạn Nháp. Loại bỏ tất cả dân làng trên Road, lấy đồng xu. Thay thế bằng thẻ từ Reserve.
+- **Courier:** Chơi trước lượt người khác trong Giai đoạn Nháp. Lấy 1 dân làng từ Road vào tay.
+- **Flaker:** Chơi trong Giai đoạn Nháp. Lấy 1 dân làng từ Village Square của bất kỳ ai vào tay.
+- **Noble:** Xem bài trên tay người khác và lấy 1 dân làng (không phải Special).
+- **Schemer:** Lấy cắp 1 Top Villager từ bất kỳ làng nào. Đồng xu thuộc về chủ cũ.
+- **Sheriff:** Loại bỏ 1 Thief của bất kỳ ai. Lấy đồng xu vào Supply.
+- **Thief:** Mỗi Giai đoạn Xây dựng, lấy 3 Vàng từ Supply người khác đặt lên Thief.
+
+### Profiteers
+- 6 thẻ, xáo trộn vào bộ chính.
+- **Alchemist:** Bronze: Một nửa giá trị của một Silver villager (làm tròn xuống).
+- **Arkwright:** Bronze: 2 Vàng cho mỗi dân làng có đồng xu.
+- **Captain:** Bronze: 1 Vàng cho mỗi Gold Symbol in.
+- **Carter:** Bronze: 1 Vàng cho mỗi Chuỗi Sản xuất có 3+ dân làng.
+- **Freelancer:** Bất kỳ ai có thể trả 1 Vàng để có thêm 1 hành động Xây dựng.
+- **Wholesaler:** Silver: 3 Vàng cho mỗi bộ 1 Ore + 1 Hay + 1 Wood Symbol.
+
+### Developments
+- 3 bộ: Technology, Mercantile, Community. Mỗi ván dùng 1 thẻ từ mỗi bộ.
+- **Giai đoạn Phát triển:** Sau mỗi Giai đoạn Xây dựng, trước Giai đoạn Chợ.
+  1. Xác định người thắng mỗi Development, trao token.
+  2. Người thắng nhận thưởng theo thứ tự.
+- **Church:** Nhiều dân làng nhất → 3 Vàng + 1 thẻ úp từ bất kỳ chồng nào.
+- **Inn:** Nhiều Special Villagers trong tay nhất → 5 Vàng.
+- **Tavern:** Nhiều Solitary Symbols nhất → 3 Vàng + 1 Basic Villager.
+- **Town Hall:** Nhiều Gold Symbols nhất → 5 Vàng.
+- **Bank:** Nhiều dân làng có đồng xu nhất → 5 Vàng.
+- **Guildhall:** Nhiều Padlock Symbols nhất → 5 Vàng.
+- **Lighthouse:** Silver Symbol giá trị nhất → 5 Vàng.
+- **Marketplace:** Nhiều Food Symbols nhất → 5 Vàng.
+- **Gold Mine:** Nhiều Ore Symbols nhất → 5 Vàng.
+- **Ox Crane:** Nhiều Hay Symbols nhất → 2 Vàng, 1 Builder.
+- **Sawmill:** Nhiều Wood Symbols nhất → 2 Vàng, 1 Builder.
+- **Windmill:** Nhiều Chuỗi Sản xuất nhất → 2 Vàng, 1 Food.
+
+---
+
+# CÁC LƯU Ý VÀ GIẢI THÍCH BỔ SUNG
+
+- **Top Villager:** Dân làng không có ai đặt lên trên.
+- **Apprentice & Monk:** Không hành xử như thẻ bị thay thế. Chúng là dân làng thuộc bộ **Special**, không có ký hiệu nào khác ngoài Suit Symbol.
+- **Tinner:** Có thể mở khóa nhiều thẻ cùng lúc, bất kể Unlocking Villager là ai. Người chơi có thể kết hợp mở khóa bằng Tinner và trả Vàng bình thường.
+- **Agent:** Chọn 1 dân làng của bạn có đồng xu, nhận Vàng bằng giá trị đồng xu đó.
+- **Peddler:** Tính theo **Gold Symbol**, không phải tổng Vàng.
+- **Wood Carver:** Tính tổng Gold Symbol trên tất cả dân làng **Wood** của bạn.
+- **Horse Trader, Log Rafter, Priest:** Bao gồm cả Suit Symbol của chính chúng.
+- **Khi hết Gold:** Nếu không đủ Vàng để trả, trả tối đa những gì có thể.
+
+---
+
+# TÓM TẮT VÒNG CHƠI
+
+| Giai đoạn | Hành động |
+|---|---|
+| **Draft Phase** | Nháp dân làng (2 + Food, tối đa 5). Cập nhật Road. |
+| **Build Phase** | Đặt dân làng (2 + Builder, tối đa 5). Mở Padlock. Nhận Basic Villagers (tối đa 3). Chơi Special Villagers. |
+| **Market Phase 1** | Khi 2 chồng đầu hết. Tính Gold Symbol + đồng xu. |
+| **Market Phase 2** | Khi tất cả chồng hết. Tính Gold + Silver + đồng xu. Kết thúc game. |
+
+---
+
+Nếu bạn cần tôi viết rõ hơn phần nào (ví dụ: chi tiết từng thẻ trong bộ mở rộng, hay cách tính điểm cụ thể), hãy cho tôi biết nhé.

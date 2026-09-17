@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Outer Drop Shadow -->
+    <filter id="coinShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Metallic Rim Gradient -->
+    <radialGradient id="coinRim" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fff8d1"/>
+      <stop offset="25%" stop-color="#ffd23f"/>
+      <stop offset="60%" stop-color="#cf940c"/>
+      <stop offset="90%" stop-color="#8c5e05"/>
+      <stop offset="100%" stop-color="#543700"/>
+    </radialGradient>
+
+    <!-- Inner Face Gradient -->
+    <radialGradient id="coinFace" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffeaa0"/>
+      <stop offset="40%" stop-color="#f3ba2f"/>
+      <stop offset="85%" stop-color="#b87d09"/>
+      <stop offset="100%" stop-color="#7a5002"/>
+    </radialGradient>
+
+    <!-- Highlight Arc -->
+    <linearGradient id="coinHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.75"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Emboss Shadow/Light for Crest -->
+    <linearGradient id="embossLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff9d6"/>
+      <stop offset="100%" stop-color="#805300"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base with Shadow -->
+  <circle cx="32" cy="33" r="29" fill="#301d00" filter="url(#coinShadow)"/>
+
+  <!-- Outer Milled Rim -->
+  <circle cx="32" cy="32" r="29" fill="url(#coinRim)"/>
+
+  <!-- Milled Edge Dots (36 notches) -->
+  <g stroke="#614101" stroke-width="1.5" stroke-dasharray="1.8 3.2" fill="none">
+    <circle cx="32" cy="32" r="27.2"/>
+  </g>
+
+  <!-- Inner Recessed Coin Field -->
+  <circle cx="32" cy="32" r="24.5" fill="url(#coinFace)" stroke="#7a5002" stroke-width="1"/>
+
+  <!-- Beaded Inner Border -->
+  <circle cx="32" cy="32" r="22.5" fill="none" stroke="#fce69a" stroke-width="1" stroke-dasharray="1.2 2.2"/>
+
+  <!-- Medieval Stamped Crest: Crown + Wheat + Value '1' -->
+  <g fill="url(#embossLight)" stroke="#664100" stroke-width="0.7" stroke-linejoin="round">
+    <!-- Stylized Crown -->
+    <path d="M 22 28 L 24 21 L 28 25 L 32 18 L 36 25 L 40 21 L 42 28 Z"/>
+    <circle cx="24" cy="20" r="1.2" fill="#fffbe0"/>
+    <circle cx="32" cy="17" r="1.5" fill="#fffbe0"/>
+    <circle cx="40" cy="20" r="1.2" fill="#fffbe0"/>
+    <rect x="22" y="28.5" width="20" height="2.5" rx="1" fill="#ffeaa0"/>
+    
+    <!-- Laurel Leaves at Bottom -->
+    <path d="M 20 38 C 22 43 27 45 32 45 C 37 45 42 43 44 38 C 41 42 37 43 32 43 C 27 43 23 42 20 38 Z" fill="#ffe385"/>
+  </g>
+
+  <!-- Central Stamped Star / Emblem -->
+  <circle cx="32" cy="35" r="4.5" fill="#f5c23a" stroke="#8c5800" stroke-width="0.8"/>
+  <polygon points="32,31 33.3,33.8 36.3,34.2 34.1,36.3 34.6,39.3 32,37.8 29.4,39.3 29.9,36.3 27.7,34.2 30.7,33.8" fill="#fff8d6"/>
+
+  <!-- Top Glass Sheen / Metallic Glare -->
+  <path d="M 12 25 A 24.5 24.5 0 0 1 52 25 C 44 30 20 30 12 25 Z" fill="url(#coinHighlight)" opacity="0.5"/>
+</svg>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villagers - PC Host Tabletop Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+    }
+
+    /* Top Command Header */
+    header.host-header {
+      padding: 8px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.5px solid var(--border-delicate);
+      background: var(--bg-glass-strong);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 2px 8px rgba(42, 38, 34, 0.04);
+      z-index: 100;
+    }
+
+    .main-board {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 14px 24px;
+      gap: 14px;
+      overflow-y: auto;
+    }
+
+    /* Road Tabletop Marketplace Section */
+    .road-section {
+      padding: 14px 18px;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1.5px solid var(--border-delicate);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .road-grid {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 6px 0;
+    }
+
+    .deck-slot {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 96px;
+      flex-shrink: 0;
+    }
+
+    .slot-label {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Players Section */
+    .players-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 14px;
+    }
+
+    .player-card {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-radius: var(--radius-lg);
+      background: #ffffff;
+      border: 1.5px solid var(--border-delicate);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .player-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 8px;
+    }
+
+    /* Bottom Control Bar */
+    .control-bar {
+      padding: 8px 24px;
+      background: var(--bg-glass-strong);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1.5px solid var(--border-delicate);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      box-shadow: 0 -2px 10px rgba(42, 38, 34, 0.04);
+      z-index: 100;
+    }
+  </style>
+</head>
+<body>
+  <div id="toast-container"></div>
+
+  <!-- Top Command Header -->
+  <header class="host-header">
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <img src="/assets/icons/title.png" alt="Villagers" class="brand-logo">
+      <span id="phase-badge" class="badge-coin tabular-nums" style="font-size: 12px; letter-spacing: 0.05em;">DRAFT PHASE</span>
+      <span id="round-badge" class="tabular-nums" style="color: var(--text-secondary); font-size: 14px; font-weight: 600;">Vòng: 1</span>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <button class="btn-theme-toggle" id="btn-host-theme-toggle" title="Đổi Bàn Trắng / Bàn Gỗ" style="display: none;">
+        <span id="host-theme-icon" style="display: inline-flex; align-items: center;"></span>
+        <span id="host-theme-text">BÀN TRẮNG</span>
+      </button>
+      <button class="btn btn-icon" id="btn-sfx-toggle" title="Bật/Tắt Âm Thanh">
+        <img id="sfx-icon" src="/assets/icons/sound_on.svg" alt="Sound" style="width: 18px; height: 18px;">
+      </button>
+      <div style="font-size: 13px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; background: #ffffff; padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border-delicate);">
+        <span>LAN Host:</span>
+        <strong id="server-url" style="color: var(--text-primary); font-family: monospace; font-size: 13.5px;">Đang kết nối...</strong>
+      </div>
+      <button class="btn btn-primary" id="btn-open-control-panel"></button>
+      <button class="btn" id="btn-show-qr"></button>
+      <button class="btn" id="btn-export-log"></button>
+    </div>
+  </header>
+
+  <!-- Main Tabletop Board Area -->
+  <div class="main-board">
+    <!-- Road Marketplace Section -->
+    <div class="road-section">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid var(--border-delicate); padding-bottom: 8px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span id="road-header-icon"></span>
+          <h3 style="color: var(--text-primary); font-size: 15px; letter-spacing: 0.04em;">CON ĐƯỜNG (ROAD) & CÁC CHỒNG BÀI DỰ TRỮ</h3>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <span class="badge-coin tabular-nums" id="bank-gold"></span>
+          <span class="badge-pill tabular-nums" id="reserve-count" style="background: var(--bg-surface-inset); border: 1px solid var(--border-subtle); color: var(--text-secondary);"></span>
+        </div>
+      </div>
+
+      <!-- 6 Columns: Top = Reserve Deck Stack, Bottom = Face-Up Market Card -->
+      <div class="road-grid" id="road-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- Players Tableaus Grid -->
+    <div class="players-grid" id="players-grid">
+      <!-- 2 to 4 Players rendered dynamically -->
+    </div>
+  </div>
+
+  <!-- Bottom Tabletop Control Toolbar -->
+  <div class="control-bar">
+    <div class="timeline-scrubber">
+      <button class="btn" id="btn-undo" title="Hoàn tác bước trước"></button>
+      <input type="range" id="rewind-slider" min="0" max="0" value="0">
+      <span id="step-label" class="tabular-nums" style="font-size: 13px; color: var(--text-primary); font-weight: 700; min-width: 68px;">Bước 0</span>
+      <button class="btn" id="btn-redo" title="Tiến tới bước sau"></button>
+    </div>
+
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <button class="btn" id="btn-shuffle"></button>
+      <button class="btn" id="btn-deal"></button>
+      <button class="btn" id="btn-adjust-gold"></button>
+      <button class="btn btn-danger" id="btn-force-phase"></button>
+    </div>
+  </div>
+
+  <!-- QR Code Modal -->
+  <div class="modal-backdrop" id="qr-modal">
+    <div class="modal-content" style="text-align: center; max-width: 440px;">
+      <div class="modal-header">
+        <h2 style="color: var(--text-primary); font-size: 19px;">KẾT NỐI ĐIỆN THOẠI</h2>
+        <button class="modal-close-btn" id="btn-close-qr-x"></button>
+      </div>
+      <p style="color: var(--text-secondary); font-size: 13px; margin-bottom: 16px;">
+        Mở camera trên điện thoại (iPhone hoặc Android) để quét mã và tham gia bàn chơi:
+      </p>
+      <div style="background: #ffffff; padding: 14px; border-radius: var(--radius-lg); display: inline-block; margin-bottom: 14px; border: 1.5px solid var(--border-delicate); box-shadow: var(--shadow-sm);">
+        <img id="qr-image" src="" alt="QR Code" style="width: 200px; height: 200px; display: block;">
+      </div>
+      <div style="font-size: 13.5px; margin-bottom: 18px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <span>Hoặc truy cập:</span>
+        <strong id="qr-url-text" style="color: var(--text-primary); font-family: monospace;"></strong>
+        <button class="btn btn-icon" id="btn-copy-url" title="Sao chép URL"></button>
+      </div>
+      <button class="btn btn-primary" id="btn-close-qr" style="width: 100%;">Đóng</button>
+    </div>
+  </div>
+
+  <!-- Tabletop Action Modals -->
+  <div class="modal-backdrop" id="adjust-gold-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 style="color: var(--text-primary); font-size: 18px;">CAN THIỆP VÀNG TRỌNG TÀI</h3>
+        <button class="modal-close-btn" id="btn-close-gold-modal-x"></button>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px;">
+        <label style="font-size: 13px; color: var(--text-secondary);">Chọn người chơi:</label>
+        <select id="select-gold-player" class="input-field" style="padding: 10px; font-size: 14px;"></select>
+        
+        <label style="font-size: 13px; color: var(--text-secondary);">Số lượng Vàng thay đổi (+ hoặc -):</label>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn" type="button" id="btn-delta-m2">-2</button>
+          <button class="btn" type="button" id="btn-delta-m1">-1</button>
+          <input type="number" id="input-gold-delta" class="input-field" value="2" style="text-align: center; font-weight: 700;">
+          <button class="btn" type="button" id="btn-delta-p1">+1</button>
+          <button class="btn" type="button" id="btn-delta-p2">+2</button>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: flex-end; gap: 10px;">
+        <button class="btn" id="btn-close-gold-modal">Hủy</button>
+        <button class="btn btn-primary" id="btn-confirm-gold">Xác nhận</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="sfx.js"></script>
+  <script type="module" src="host.js"></script>
+</body>
+</html>

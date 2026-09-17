@@ -1,0 +1,3206 @@
+[
+  {
+    "id": "founders",
+    "code": "Founders",
+    "name": "Founders",
+    "set": "base",
+    "suit": "Grain",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 5,
+    "images": [
+      "assets/cards/1f1_1.png",
+      "assets/cards/1b2_1.png"
+    ],
+    "primary_image": "assets/cards/1f1_1.png",
+    "description": "Founders start the Grain suit Production Chain. Founders are double-sided. Each player starts with a Founders in their Village, the 2-Gold side face up. It will turn to the Food side if a player has no Food at the end of the Build Phase. Each player has a different illustration for their Founders. There are no functional differences between them.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "lumberjack",
+    "code": "Lumberjack",
+    "name": "Lumberjack",
+    "set": "base",
+    "suit": "Wood",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 10,
+    "images": [
+      "assets/cards/2a_1.png",
+      "assets/cards/2b_1.png"
+    ],
+    "primary_image": "assets/cards/2a_1.png",
+    "description": "Lumberjacks are Basic Villagers that start the Wood suit Production Chains. Basic Villagers are double-sided with different illustrations (male and female). You can choose which side is shown for all Basic Villagers in Preferences.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "hayer",
+    "code": "Hayer",
+    "name": "Hayer",
+    "set": "base",
+    "suit": "Hay",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 10,
+    "images": [
+      "assets/cards/3a_1.png",
+      "assets/cards/3b_1.png"
+    ],
+    "primary_image": "assets/cards/3a_1.png",
+    "description": "Hayers are Basic Villagers that start the Hay suit Production Chains. Basic Villagers are double-sided with different illustrations (male and female). You can choose which side is shown for all Basic Villagers in Preferences.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "miner",
+    "code": "Miner",
+    "name": "Miner",
+    "set": "base",
+    "suit": "Ore",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 10,
+    "images": [
+      "assets/cards/4a_1.png",
+      "assets/cards/4b_1.png"
+    ],
+    "primary_image": "assets/cards/4a_1.png",
+    "description": "Miners are Basic Villagers that start the Ore suit Production Chains. Basic Villagers are double-sided with different illustrations (male and female). You can choose which side is shown for all Basic Villagers in Preferences.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "brewer",
+    "code": "Brewer",
+    "name": "Brewer",
+    "set": "base",
+    "suit": "Grain",
+    "gold": 0,
+    "food": 1,
+    "builder": 1,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Founders"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Cooper",
+      "unlocks": [
+        "Freemason"
+      ]
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/5_1.png"
+    ],
+    "primary_image": "assets/cards/5_1.png",
+    "description": "1 Food, 1 Builder Played on: Founders Unlocked by: Cooper Unlocks: Freemason",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "poulterer",
+    "code": "Poulterer",
+    "name": "Poulterer",
+    "set": "base",
+    "suit": "Grain",
+    "gold": 3,
+    "food": 1,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Founders"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Carpenter",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/6_1.png"
+    ],
+    "primary_image": "assets/cards/6_1.png",
+    "description": "1 Food, 3 Gold Played on: Founders Unlocked by: Carpenter",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "swineherd",
+    "code": "Swineherd",
+    "name": "Swineherd",
+    "set": "base",
+    "suit": "Grain",
+    "gold": 2,
+    "food": 1,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Founders"
+      ],
+      "precedes": [
+        "Truffler"
+      ]
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/7_1.png"
+    ],
+    "primary_image": "assets/cards/7_1.png",
+    "description": "1 Food, 2 Gold Played on: Founders Precedes: Truffler",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "truffler",
+    "code": "Truffler",
+    "name": "Truffler",
+    "set": "base",
+    "suit": "Grain",
+    "gold": 8,
+    "food": 1,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Swineherd"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Hunter",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/8_1.png"
+    ],
+    "primary_image": "assets/cards/8_1.png",
+    "description": "1 Food, 8 Gold Played on: Swineherd Unlocked by: Hunter",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "carpenter",
+    "code": "Carpenter",
+    "name": "Carpenter",
+    "set": "base",
+    "suit": "Wood",
+    "gold": 0,
+    "food": 0,
+    "builder": 1,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Lumberjack"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": [
+        "Bed Builder",
+        "Beekeeper",
+        "Poulterer",
+        "Weaver (4p+)"
+      ]
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/9_1.png"
+    ],
+    "primary_image": "assets/cards/9_1.png",
+    "description": "1 Builder Played on: Lumberjack Unlocks: Bed Builder , Beekeeper , Poulterer , Weaver (4p+)",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "cartwright",
+    "code": "Cartwright",
+    "name": "Cartwright",
+    "set": "base",
+    "suit": "Wood",
+    "gold": 9,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Wheeler"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": [
+        "Peddler"
+      ]
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/10_1.png"
+    ],
+    "primary_image": "assets/cards/10_1.png",
+    "description": "9 Gold Played on: Wheeler Unlocks: Peddler",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "cooper",
+    "code": "Cooper",
+    "name": "Cooper",
+    "set": "base",
+    "suit": "Wood",
+    "gold": 4,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Lumberjack"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Blacksmith",
+      "unlocks": [
+        "Brewer",
+        "Milk Maid",
+        "Vintner"
+      ]
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/11_1.png"
+    ],
+    "primary_image": "assets/cards/11_1.png",
+    "description": "4 Gold Played on: Lumberjack Unlocked by: Blacksmith Unlocks: Brewer , Milk Maid , Vintner",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "lografter",
+    "code": "LogRafter",
+    "name": "Log Rafter",
+    "set": "base",
+    "suit": "Wood",
+    "gold": 1,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "1 Gold per Wood Symbol Played on: Lumberjack",
+    "production_chain": {
+      "placed_on": [
+        "Lumberjack"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/12_1.png"
+    ],
+    "primary_image": "assets/cards/12_1.png",
+    "description": "2 Wood Symbols Silver scoring: 1 Gold per Wood Symbol Played on: Lumberjack",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "shipwright",
+    "code": "Shipwright",
+    "name": "Shipwright",
+    "set": "base",
+    "suit": "Wood",
+    "gold": 2,
+    "food": 0,
+    "builder": 1,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Lumberjack"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": [
+        "Fisher",
+        "Smuggler"
+      ]
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/13_1.png"
+    ],
+    "primary_image": "assets/cards/13_1.png",
+    "description": "1 Builder, 2 Gold Played on: Lumberjack Unlocks: Fisher , Smuggler",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "wheeler",
+    "code": "Wheeler",
+    "name": "Wheeler",
+    "set": "base",
+    "suit": "Wood",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Lumberjack"
+      ],
+      "precedes": [
+        "Cartwright"
+      ]
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/14_1.png"
+    ],
+    "primary_image": "assets/cards/14_1.png",
+    "description": "3 Gold Played on: Lumberjack Precedes: Cartwright",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "woodcarver",
+    "code": "WoodCarver",
+    "name": "Wood Carver",
+    "set": "base",
+    "suit": "Wood",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "Sum of all Gold symbols printed on your Wood villagers Played on: Lumberjack",
+    "production_chain": {
+      "placed_on": [
+        "Lumberjack"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/15_1.png"
+    ],
+    "primary_image": "assets/cards/15_1.png",
+    "description": "Silver scoring: Sum of all Gold symbols printed on your Wood villagers Played on: Lumberjack",
+    "clarification": "Clarification: The Wood Carver scores the total value of all Gold Symbols on your Wood Villagers. If you have 1 Cartwright and a Cooper for example your Wood Carver will earn 13 Gold.",
+    "deviation": null
+  },
+  {
+    "id": "bedbuilder",
+    "code": "BedBuilder",
+    "name": "Bed Builder",
+    "set": "base",
+    "suit": "Hay",
+    "gold": 4,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Hayer"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Carpenter",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/16_1.png"
+    ],
+    "primary_image": "assets/cards/16_1.png",
+    "description": "4 Gold, 2 Hay Symbols Played on: Hayer Unlocked by: Carpenter",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "fromager",
+    "code": "Fromager",
+    "name": "Fromager",
+    "set": "base",
+    "suit": "Hay",
+    "gold": 15,
+    "food": 1,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Milk Maid"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/17_1.png"
+    ],
+    "primary_image": "assets/cards/17_1.png",
+    "description": "1 Food, 15 Gold Played on: Milk Maid",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "grazier",
+    "code": "Grazier",
+    "name": "Grazier",
+    "set": "base",
+    "suit": "Hay",
+    "gold": 0,
+    "food": 1,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Hayer"
+      ],
+      "precedes": [
+        "Milk Maid"
+      ]
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/18_1.png"
+    ],
+    "primary_image": "assets/cards/18_1.png",
+    "description": "1 Food Played on: Hayer Precedes: Milk Maid",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "horsetrader",
+    "code": "HorseTrader",
+    "name": "Horse Trader",
+    "set": "base",
+    "suit": "Hay",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "3 Gold for every 2 Hay Symbols (rounded down) Played on: Hayer",
+    "production_chain": {
+      "placed_on": [
+        "Hayer"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/19_1.png"
+    ],
+    "primary_image": "assets/cards/19_1.png",
+    "description": "Silver scoring: 3 Gold for every 2 Hay Symbols (rounded down) Played on: Hayer",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "milkmaid",
+    "code": "MilkMaid",
+    "name": "Milk Maid",
+    "set": "base",
+    "suit": "Hay",
+    "gold": 0,
+    "food": 2,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Grazier"
+      ],
+      "precedes": [
+        "Fromager"
+      ]
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Cooper",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/20_1.png"
+    ],
+    "primary_image": "assets/cards/20_1.png",
+    "description": "2 Food Played on: Grazier Precedes: Fromager Unlocked by: Cooper",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "oremuler",
+    "code": "OreMuler",
+    "name": "Ore Muler",
+    "set": "base",
+    "suit": "Hay",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "3 Gold for every 2 Ore symbols (rounded down) Played on: Hayer",
+    "production_chain": {
+      "placed_on": [
+        "Hayer"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/21_1.png"
+    ],
+    "primary_image": "assets/cards/21_1.png",
+    "description": "Silver scoring: 3 Gold for every 2 Ore symbols (rounded down) Played on: Hayer",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "peddler",
+    "code": "Peddler",
+    "name": "Peddler",
+    "set": "base",
+    "suit": "Hay",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "3 Gold for every 2 Gold symbols (rounded down) Played on: Hayer Unlocked by: Cartwright",
+    "production_chain": {
+      "placed_on": [
+        "Hayer"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Cartwright",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/22_1.png"
+    ],
+    "primary_image": "assets/cards/22_1.png",
+    "description": "Silver scoring: 3 Gold for every 2 Gold symbols (rounded down) Played on: Hayer Unlocked by: Cartwright",
+    "clarification": "Clarification: The Peddler gives you 3 gold for every 2 Gold Symbols, not every 2 Gold. If for example the only Gold Symbols in your Village are on two Jewelers, each giving 20 Gold, a Peddler will score just 3 Gold.",
+    "deviation": null
+  },
+  {
+    "id": "thatcher",
+    "code": "Thatcher",
+    "name": "Thatcher",
+    "set": "base",
+    "suit": "Hay",
+    "gold": 2,
+    "food": 0,
+    "builder": 1,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Hayer"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/23_1.png"
+    ],
+    "primary_image": "assets/cards/23_1.png",
+    "description": "1 Builder, 2 Gold Played on: Hayer",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "blacksmith",
+    "code": "Blacksmith",
+    "name": "Blacksmith",
+    "set": "base",
+    "suit": "Ore",
+    "gold": 2,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Miner"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": [
+        "Cooper",
+        "Glass Blower",
+        "Jeweler",
+        "Locksmith",
+        "Cobbler (4p+)"
+      ]
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/24_1.png"
+    ],
+    "primary_image": "assets/cards/24_1.png",
+    "description": "2 Gold Played on: Miner Unlocks: Cooper , Glass Blower , Jeweler , Locksmith , Cobbler (4p+)",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "glassblower",
+    "code": "GlassBlower",
+    "name": "Glass Blower",
+    "set": "base",
+    "suit": "Ore",
+    "gold": 4,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Miner"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Blacksmith",
+      "unlocks": [
+        "Wine Trader"
+      ]
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/25_1.png"
+    ],
+    "primary_image": "assets/cards/25_1.png",
+    "description": "4 Gold, 2 Ore Symbols Played on: Miner Unlocked by: Blacksmith Unlocks: Wine Trader",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "jeweler",
+    "code": "Jeweler",
+    "name": "Jeweler",
+    "set": "base",
+    "suit": "Ore",
+    "gold": 20,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Spelunker"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Blacksmith",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/26_1.png"
+    ],
+    "primary_image": "assets/cards/26_1.png",
+    "description": "20 Gold Played on: Spelunker Unlocked by: Blacksmith",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "locksmith",
+    "code": "Locksmith",
+    "name": "Locksmith",
+    "set": "base",
+    "suit": "Ore",
+    "gold": 2,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "2 Gold for each Padlock Symbol Played on: Miner Unlocked by: Blacksmith",
+    "production_chain": {
+      "placed_on": [
+        "Miner"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Blacksmith",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/27_1.png"
+    ],
+    "primary_image": "assets/cards/27_1.png",
+    "description": "Silver scoring: 2 Gold for each Padlock Symbol Played on: Miner Unlocked by: Blacksmith",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "mason",
+    "code": "Mason",
+    "name": "Mason",
+    "set": "base",
+    "suit": "Ore",
+    "gold": 2,
+    "food": 0,
+    "builder": 1,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Miner"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/28_1.png"
+    ],
+    "primary_image": "assets/cards/28_1.png",
+    "description": "1 Builder, 2 Gold Played on: Miner",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "seeker",
+    "code": "Seeker",
+    "name": "Seeker",
+    "set": "base",
+    "suit": "Ore",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Miner"
+      ],
+      "precedes": [
+        "Spelunker"
+      ]
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/29_1.png"
+    ],
+    "primary_image": "assets/cards/29_1.png",
+    "description": "Precedes: Spelunker Played on: Miner",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "spelunker",
+    "code": "Spelunker",
+    "name": "Spelunker",
+    "set": "base",
+    "suit": "Ore",
+    "gold": 10,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Seeker"
+      ],
+      "precedes": [
+        "Jeweler"
+      ]
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Chandler",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/30_1.png"
+    ],
+    "primary_image": "assets/cards/30_1.png",
+    "description": "10 Gold Played on: Seeker Precedes: Jeweler Unlocked by: Chandler",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "graper",
+    "code": "Graper",
+    "name": "Graper",
+    "set": "base",
+    "suit": "Grapes",
+    "gold": 0,
+    "food": 1,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/31_1.png"
+    ],
+    "primary_image": "assets/cards/31_1.png",
+    "description": "1 Food Starts the Grape suit Production Chain",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "vintner",
+    "code": "Vintner",
+    "name": "Vintner",
+    "set": "base",
+    "suit": "Grapes",
+    "gold": 5,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Graper"
+      ],
+      "precedes": [
+        "Wine Trader"
+      ]
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Cooper",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/32_1.png"
+    ],
+    "primary_image": "assets/cards/32_1.png",
+    "description": "5 Gold Played on: Graper Precedes: Wine Trader Unlocked by: Cooper",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "winetrader",
+    "code": "WineTrader",
+    "name": "Wine Trader",
+    "set": "base",
+    "suit": "Grapes",
+    "gold": 14,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Vintner"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Glass Blower",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/33_1.png"
+    ],
+    "primary_image": "assets/cards/33_1.png",
+    "description": "14 Gold Played on: Vintner Unlocked by: Glass Blower",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "shepherd",
+    "code": "Shepherd",
+    "name": "Shepherd",
+    "set": "base",
+    "suit": "Wool",
+    "gold": 0,
+    "food": 1,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/34_1.png"
+    ],
+    "primary_image": "assets/cards/34_1.png",
+    "description": "1 Food Starts the Wool suit Production Chain",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "spinner",
+    "code": "Spinner",
+    "name": "Spinner",
+    "set": "base",
+    "suit": "Wool",
+    "gold": 4,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Shepherd"
+      ],
+      "precedes": [
+        "Weaver"
+      ]
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/35_1.png"
+    ],
+    "primary_image": "assets/cards/35_1.png",
+    "description": "4 Gold Played on: Shepherd Precedes: Weaver",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "tailor",
+    "code": "Tailor",
+    "name": "Tailor",
+    "set": "base",
+    "suit": "Wool",
+    "gold": 24,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Weaver"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/36_1.png"
+    ],
+    "primary_image": "assets/cards/36_1.png",
+    "description": "24 Gold Played on: Weaver",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "weaver",
+    "code": "Weaver",
+    "name": "Weaver",
+    "set": "base",
+    "suit": "Wool",
+    "gold": 12,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Spinner"
+      ],
+      "precedes": [
+        "Tailor"
+      ]
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Carpenter",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/37_1.png"
+    ],
+    "primary_image": "assets/cards/37_1.png",
+    "description": "12 Gold Played on: Spinner Precedes: Tailor Unlocked by: Carpenter",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "cobbler",
+    "code": "Cobbler",
+    "name": "Cobbler",
+    "set": "base",
+    "suit": "Leather",
+    "gold": 6,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Tanner"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Blacksmith",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/38_1.png"
+    ],
+    "primary_image": "assets/cards/38_1.png",
+    "description": "6 Gold Played on: Tanner Unlocked by: Blacksmith",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "saddler",
+    "code": "Saddler",
+    "name": "Saddler",
+    "set": "base",
+    "suit": "Leather",
+    "gold": 5,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Tanner"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/39_1.png"
+    ],
+    "primary_image": "assets/cards/39_1.png",
+    "description": "5 Gold Played on: Tanner",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "tanner",
+    "code": "Tanner",
+    "name": "Tanner",
+    "set": "base",
+    "suit": "Leather",
+    "gold": 2,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/40_1.png"
+    ],
+    "primary_image": "assets/cards/40_1.png",
+    "description": "2 Gold Starts the Leather suit Production Chain",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "agent",
+    "code": "Agent",
+    "name": "Agent",
+    "set": "base",
+    "suit": "Solitary",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "Gold equal to the value of coins placed on one villager On Yucata",
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/41_1.png"
+    ],
+    "primary_image": "assets/cards/41_1.png",
+    "description": "Silver scoring: Gold equal to the value of coins placed on one villager On Yucata.de , the largest value is automatically chosen.",
+    "clarification": "Clarification : The Agent scores as much as the Gold value of the coins placed on one of your villagers . You choose which one.",
+    "deviation": null
+  },
+  {
+    "id": "beekeeper",
+    "code": "Beekeeper",
+    "name": "Beekeeper",
+    "set": "base",
+    "suit": "Solitary",
+    "gold": 4,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Carpenter",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/42_1.png"
+    ],
+    "primary_image": "assets/cards/42_1.png",
+    "description": "4 Gold Unlocked by: Carpenter",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "chandler",
+    "code": "Chandler",
+    "name": "Chandler",
+    "set": "base",
+    "suit": "Solitary",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": [
+        "Priest",
+        "Spelunker"
+      ]
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/43_1.png"
+    ],
+    "primary_image": "assets/cards/43_1.png",
+    "description": "3 Gold, 2 Solitary Symbols Unlocks: Priest , Spelunker",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "fisher",
+    "code": "Fisher",
+    "name": "Fisher",
+    "set": "base",
+    "suit": "Solitary",
+    "gold": 3,
+    "food": 1,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Shipwright",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/44_1.png"
+    ],
+    "primary_image": "assets/cards/44_1.png",
+    "description": "1 Food, 3 Gold Unlocked by: Shipwright",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "freemason",
+    "code": "Freemason",
+    "name": "Freemason",
+    "set": "base",
+    "suit": "Solitary",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "3 Gold for each Builder Unlocked by: Brewer",
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Brewer",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/45_1.png"
+    ],
+    "primary_image": "assets/cards/45_1.png",
+    "description": "Silver scoring: 3 Gold for each Builder Unlocked by: Brewer",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "grocer",
+    "code": "Grocer",
+    "name": "Grocer",
+    "set": "base",
+    "suit": "Solitary",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "3 Gold for each Food Unlocked by: Harvester",
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Harvester",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/46_1.png"
+    ],
+    "primary_image": "assets/cards/46_1.png",
+    "description": "Silver scoring: 3 Gold for each Food Unlocked by: Harvester",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "harvester",
+    "code": "Harvester",
+    "name": "Harvester",
+    "set": "base",
+    "suit": "Solitary",
+    "gold": 0,
+    "food": 1,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": [
+        "Grocer"
+      ]
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/47_1.png"
+    ],
+    "primary_image": "assets/cards/47_1.png",
+    "description": "1 Food Unlocks: Grocer",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "hunter",
+    "code": "Hunter",
+    "name": "Hunter",
+    "set": "base",
+    "suit": "Solitary",
+    "gold": 0,
+    "food": 1,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": [
+        "Truffler"
+      ]
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/48_1.png"
+    ],
+    "primary_image": "assets/cards/48_1.png",
+    "description": "1 Food Unlocks: Truffler",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "priest",
+    "code": "Priest",
+    "name": "Priest",
+    "set": "base",
+    "suit": "Solitary",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "3 Gold for every 2 Solitary Symbols (rounded down) Unlocked by: Chandler",
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Chandler",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/49_1.png"
+    ],
+    "primary_image": "assets/cards/49_1.png",
+    "description": "Silver scoring: 3 Gold for every 2 Solitary Symbols (rounded down) Unlocked by: Chandler",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "wattler",
+    "code": "Wattler",
+    "name": "Wattler",
+    "set": "base",
+    "suit": "Solitary",
+    "gold": 0,
+    "food": 0,
+    "builder": 1,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/50_1.png"
+    ],
+    "primary_image": "assets/cards/50_1.png",
+    "description": "1 Builder",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "apprentice",
+    "code": "Apprentice",
+    "name": "Apprentice",
+    "set": "base",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/51_1.png"
+    ],
+    "primary_image": "assets/cards/51_1.png",
+    "description": "Replace any non-Top villager in any village with the Apprentice, then place the replaced villager in your Village.",
+    "clarification": "Clarification: The Apprentice can swap places with any villager in any Village that is covered by another card in its Production Chain. He can be used in other player's Villages, or in your own. The card he swaps places with must then be placed in your Village immediately, following the normal rules for placing Villagers. Using the Apprentice only uses up one build action, not two. Though the Apprentice cannot be used to steal another player's Founders (as stated in the rules for Special Villagers), he can be used on your own Founders, if they have at least one card placed on top of them. If you do you can choose which side of them you place face-up.",
+    "deviation": null
+  },
+  {
+    "id": "monk",
+    "code": "Monk",
+    "name": "Monk",
+    "set": "base",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/52_1.png"
+    ],
+    "primary_image": "assets/cards/52_1.png",
+    "description": "The Monk can be used as any one villager in a Production Chain. The Monk can't be the top (last) villager of a Production Chain. Clarification: The Monk can be used as any villager, as long as you don't make him the top card of a Production Chain. This means he will always be placed at the same time as another villager, with the Monk below the other, taking the role as one of the villagers in the Production Chain. The Production Chain he is used in must have all the other cards in correct order. 2 Monks can be used in the same Production Chain. Monks and Apprentices : These do not act as the cards they are replacing, they are simply villagers with no symbols printed on them, except their Suit Symbol, they belong to the Special suit. Their purpose is to be placed below other villagers. The next villager in the Production Chain must always be on top of the Monk or Apprentice. If for any reason, a Monk or an Apprentice becomes the top card of a Production Chain, it returns back to the hand of the player whose village it was in. If an Apprentice or Monk is the bottom card of a Production Chain, it can have 2 cards on top. They must be of the same suit.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "smuggler",
+    "code": "Smuggler",
+    "name": "Smuggler",
+    "set": "base",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": true,
+      "unlocked_by": "Shipwright",
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/53_1.png"
+    ],
+    "primary_image": "assets/cards/53_1.png",
+    "description": "Earn half the printed Gold value of a villager in your Village, rounding up. Discarded after use Unlocked by: Shipwright",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "tinner",
+    "code": "Tinner",
+    "name": "Tinner",
+    "set": "base",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/54_1.png"
+    ],
+    "primary_image": "assets/cards/54_1.png",
+    "description": "Unlock any Padlocks on any villagers played together with the Tinner for free. Discarded after use",
+    "clarification": "Clarification: The Tinner can unlock several cards even if they have different unlockers. It does not matter if you or some other player has the Unlocking Villagers, they can be unlocked for free by the Tinner as long as they’re played in the same Build Phase. Players are allowed to mix and match, unlocking some villagers with the Tinner and some without her (to place coins on your own villagers for example).",
+    "deviation": null
+  },
+  {
+    "id": "benefactor",
+    "code": "Benefactor",
+    "name": "Benefactor",
+    "set": "base",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/55_1.png"
+    ],
+    "primary_image": "assets/cards/55_1.png",
+    "description": "Play during the Draft Phase Play a villager from your hand into your village. It cannot be a Special villager. Discarded after use",
+    "clarification": "Clarification: You cannot trade in a card from your hand to get a Basic Villager when using the Benefactor, that action must be taken in the Build Phase.",
+    "deviation": null
+  },
+  {
+    "id": "nun",
+    "code": "Nun",
+    "name": "Nun",
+    "set": "base",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "At the end of the game, awards an amount of Gold equal to the Silver value of a villager that you have exactly one of in your Village .",
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/56_1.png"
+    ],
+    "primary_image": "assets/cards/56_1.png",
+    "description": "At the end of the game, awards an amount of Gold equal to the Silver value of a villager that you have exactly one of in your Village . On Yucata.de , the largest value is automatically chosen.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "pigeoneer",
+    "code": "Pigeoneer",
+    "name": "Pigeoneer",
+    "set": "base",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/57_1.png"
+    ],
+    "primary_image": "assets/cards/57_1.png",
+    "description": "Look at the top 6 cards of the Reserve and take 1 of them to your hand. Then return the rest in any order. Discarded after use",
+    "clarification": "Clarification: After taking the chosen villager to your hand, return the other villagers to the top of the Reserve in any order.",
+    "deviation": null
+  },
+  {
+    "id": "prophet",
+    "code": "Prophet",
+    "name": "Prophet",
+    "set": "base",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/58_1.png"
+    ],
+    "primary_image": "assets/cards/58_1.png",
+    "description": "Play during the Draft Phase Look through a stack on the Road and draft a villager from it. Return the rest of the stack in any order. Discarded after use Clarification: The Prophet counts as your Draft for the turn. The Prophet cannot look through the Reserve, the Pigeoneer does that. Return the stack to its place on the Road after drafting, placing the cards in any order in the stack.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "recruiter",
+    "code": "Recruiter",
+    "name": "Recruiter",
+    "set": "solo",
+    "suit": "Special",
+    "gold": 1,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/59_1.png"
+    ],
+    "primary_image": "assets/cards/59_1.png",
+    "description": "In every Draft Phase turn , you may pay 1 Gold to draft 2 villagers. Your Food Limit still applies.",
+    "clarification": "Clarification: When using the Recruiter, replace the face-up card you drafted on the Road before picking your next card.",
+    "deviation": "On Yucata.de this card is not available in Solo Mode."
+  },
+  {
+    "id": "barbarian",
+    "code": "Barbarian",
+    "name": "Barbarian",
+    "set": "base",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/60_1.png"
+    ],
+    "primary_image": "assets/cards/60_1.png",
+    "description": "Play during the Draft Phase Discard all villagers on the Road , taking the coins into your Supply . Replace the villagers with villagers from the Reserve . Discarded after use",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "courier",
+    "code": "Courier",
+    "name": "Courier",
+    "set": "base",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/61_1.png"
+    ],
+    "primary_image": "assets/cards/61_1.png",
+    "description": "Play before another player's turn in the Draft Phase . Take a villager from the road directly to your hand . Discarded after use",
+    "clarification": "Clarification: You must use the Courier before the currently playing player has picked up a card from the Road. Replace the card on the Road with a new one from the leftmost stack as when drafting.",
+    "deviation": "This card is not implemented on Yucata.de ; players will never receive it."
+  },
+  {
+    "id": "flaker",
+    "code": "Flaker",
+    "name": "Flaker",
+    "set": "base",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/62_1.png"
+    ],
+    "primary_image": "assets/cards/62_1.png",
+    "description": "Play during the Draft Phase Take a villager from any player's Village Square directly to your hand. Discarded after use",
+    "clarification": "Clarification: You can also use the Flaker on your own Village Square (this allows you to draft an extra villager as it frees up one Draft Action!)",
+    "deviation": null
+  },
+  {
+    "id": "noble",
+    "code": "Noble",
+    "name": "Noble",
+    "set": "solo",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/63_1.png"
+    ],
+    "primary_image": "assets/cards/63_1.png",
+    "description": "Look through another player's hand and steal one villager from that hand. It cannot be a special villager. Discarded after use",
+    "clarification": "Clarification: When using the Noble, you do get to look at both sides of the other player's cards.",
+    "deviation": "On Yucata.de this card is not available in Solo Mode."
+  },
+  {
+    "id": "schemer",
+    "code": "Schemer",
+    "name": "Schemer",
+    "set": "base",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/64_1.png"
+    ],
+    "primary_image": "assets/cards/64_1.png",
+    "description": "Steal a Top Villager from any Village . Any coins on it go to the owner's Supply. It cannot be a Special villager. Discarded after use",
+    "clarification": "Clarification: Coins on a villager stolen by the Schemer go to the Supply of the player stolen from. You can also use the Schemer to take one of your own villagers back to your hand. If it's a villager with coins on it, the coins go to your Supply.",
+    "deviation": null
+  },
+  {
+    "id": "sheriff",
+    "code": "Sheriff",
+    "name": "Sheriff",
+    "set": "base",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/65_1.png"
+    ],
+    "primary_image": "assets/cards/65_1.png",
+    "description": "Discard a Thief belonging to any player. Take its coins to your Supply . Discarded after use",
+    "clarification": "Clarification: You can also use a Sheriff on your own Thief to get the coins to your own Supply .",
+    "deviation": null
+  },
+  {
+    "id": "thief",
+    "code": "Thief",
+    "name": "Thief",
+    "set": "base",
+    "suit": "Special",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/66_1.png"
+    ],
+    "primary_image": "assets/cards/66_1.png",
+    "description": "In every Build Phase , take 3 Gold from another player's Supply and place them on the Thief.",
+    "clarification": "Clarification: Coins on the Thief can be scored by other villagers such as the Agent and the Arkwright . The coins on the Thief are scored in the Market Phases just like other coins on villagers. You cannot steal coins from a player with less than 3 Gold in their Supply. You can only steal from another player's Supply, not from Gold placed on their villagers.",
+    "deviation": null
+  },
+  {
+    "id": "alchemist",
+    "code": "Alchemist",
+    "name": "Alchemist",
+    "set": "base",
+    "suit": "Special",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "Miner On Yucata",
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/67_1.png"
+    ],
+    "primary_image": "assets/cards/67_1.png",
+    "description": "Bronze scoring: Half the value of one of your Silver villagers , rounding down. Played on: Miner On Yucata.de , the largest value is automatically chosen.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "arkwright",
+    "code": "Arkwright",
+    "name": "Arkwright",
+    "set": "base",
+    "suit": "Special",
+    "gold": 2,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Lumberjack"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/68_1.png"
+    ],
+    "primary_image": "assets/cards/68_1.png",
+    "description": "Bronze scoring: 2 Gold for each Villager with any coins placed on it . Played on: Lumberjack",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "captain",
+    "code": "Captain",
+    "name": "Captain",
+    "set": "base",
+    "suit": "Special",
+    "gold": 1,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/69_1.png"
+    ],
+    "primary_image": "assets/cards/69_1.png",
+    "description": "Bronze scoring: 1 Gold for each Gold Symbol .",
+    "clarification": "The Captain scores 1 Gold for each printed Gold Symbol in your Village (he does not score for all your Gold or your coins!).",
+    "deviation": null
+  },
+  {
+    "id": "carter",
+    "code": "Carter",
+    "name": "Carter",
+    "set": "base",
+    "suit": "Special",
+    "gold": 1,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [
+        "Hayer"
+      ],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/70_1.png"
+    ],
+    "primary_image": "assets/cards/70_1.png",
+    "description": "Bronze scoring: 1 Gold for each Production Chain with 3 or more Villagers . Played on: Hayer",
+    "clarification": "The Carter scores 1 Gold for each Production Chain you have with at least 3 cards. For example a Miner with two Blacksmiths on top will score 1 Gold with the Carter. Similarly, a Lumberjack with a Wheeler and Cartwright on top will also score 1 Gold.",
+    "deviation": null
+  },
+  {
+    "id": "freelancer",
+    "code": "Freelancer",
+    "name": "Freelancer",
+    "set": "base",
+    "suit": "Special",
+    "gold": 1,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/71_1.png"
+    ],
+    "primary_image": "assets/cards/71_1.png",
+    "description": "Any player may place 1 Gold on a Freelancer at the start of their Build Phase to get an extra Build Action .",
+    "clarification": "You can also pay your own Freelancer to get an extra Build Action. Each player can only pay each Freelancer once in each Build Phase. If both Freelancers are present, a player may choose to pay both, to get 2 extra Build Actions. The maximum of 5 Build Actions still applies.",
+    "deviation": null
+  },
+  {
+    "id": "wholesaler",
+    "code": "Wholesaler",
+    "name": "Wholesaler",
+    "set": "base",
+    "suit": "Special",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "3 Gold for each set of 1&nbsp;Ore, 1 Hay and 1 Wood Symbol",
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/72_1.png"
+    ],
+    "primary_image": "assets/cards/72_1.png",
+    "description": "Silver scoring: 3 Gold for each set of 1&nbsp;Ore, 1 Hay and 1 Wood Symbol .",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "church",
+    "code": "Church",
+    "name": "Church",
+    "set": "developments",
+    "suit": "Development",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/d4_1.png"
+    ],
+    "primary_image": "assets/cards/d4_1.png",
+    "description": "Condition: the most Villagers Reward: 3 Gold, and one face-down card taken from any stack or the Reserve into your hand",
+    "clarification": "Clarification: The winner is the player with the most villagers in their Village . So you count the number of villagers, not the Suit Symbols. You may take the top face-down villager from any stack including the Reserve to your hand. You do not need to reveal what you got.",
+    "deviation": "On Yucata.de this card is not available in Solo Mode."
+  },
+  {
+    "id": "inn",
+    "code": "Inn",
+    "name": "Inn",
+    "set": "developments",
+    "suit": "Development",
+    "gold": 5,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/d2_1.png"
+    ],
+    "primary_image": "assets/cards/d2_1.png",
+    "description": "Condition: the most Special Villagers in hand Reward: 5 Gold",
+    "clarification": "Clarification: When checking who won this, show the other players the backs of the villagers in your hand to show how many Special villagers you have. It is not necessary to show the fronts.",
+    "deviation": "On Yucata.de this card is not available in Solo Mode."
+  },
+  {
+    "id": "tavern",
+    "code": "Tavern",
+    "name": "Tavern",
+    "set": "developments",
+    "suit": "Development",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/d3_1.png"
+    ],
+    "primary_image": "assets/cards/d3_1.png",
+    "description": "Condition: the most Solitary Symbols Reward: 3 Gold, and take a Basic Villager into your Village",
+    "clarification": "You can take any one Basic Villager, either a Miner, Lumberjack or Hayer. Place the chosen Basic Villager in your Village immediately.",
+    "deviation": null
+  },
+  {
+    "id": "townhall",
+    "code": "TownHall",
+    "name": "Town Hall",
+    "set": "developments",
+    "suit": "Development",
+    "gold": 5,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/d1_1.png"
+    ],
+    "primary_image": "assets/cards/d1_1.png",
+    "description": "Condition: the most Gold Symbols Reward: 5 Gold",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "bank",
+    "code": "Bank",
+    "name": "Bank",
+    "set": "developments",
+    "suit": "Development",
+    "gold": 5,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/d5_1.png"
+    ],
+    "primary_image": "assets/cards/d5_1.png",
+    "description": "Condition: the most Villagers with coins on them Reward: 5 Gold",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "guildhall",
+    "code": "Guildhall",
+    "name": "Guildhall",
+    "set": "developments",
+    "suit": "Development",
+    "gold": 5,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/d8_1.png"
+    ],
+    "primary_image": "assets/cards/d8_1.png",
+    "description": "Condition: the most Padlock Symbols Reward: 5 Gold",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "lighthouse",
+    "code": "Lighthouse",
+    "name": "Lighthouse",
+    "set": "developments",
+    "suit": "Development",
+    "gold": 5,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "5 Gold",
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/d7_1.png"
+    ],
+    "primary_image": "assets/cards/d7_1.png",
+    "description": "Condition: the most valuable Silver Symbol Reward: 5 Gold",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "marketplace",
+    "code": "Marketplace",
+    "name": "Marketplace",
+    "set": "developments",
+    "suit": "Development",
+    "gold": 5,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/d6_1.png"
+    ],
+    "primary_image": "assets/cards/d6_1.png",
+    "description": "Condition: the most Food Symbols Reward: 5 Gold",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "goldmine",
+    "code": "GoldMine",
+    "name": "Gold Mine",
+    "set": "developments",
+    "suit": "Development",
+    "gold": 5,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/d11_1.png"
+    ],
+    "primary_image": "assets/cards/d11_1.png",
+    "description": "Condition: the most Ore Symbols Reward: 5 Gold",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "oxcrane",
+    "code": "OxCrane",
+    "name": "Ox Crane",
+    "set": "developments",
+    "suit": "Development",
+    "gold": 2,
+    "food": 0,
+    "builder": 1,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/d12_1.png"
+    ],
+    "primary_image": "assets/cards/d12_1.png",
+    "description": "Condition: the most Hay Symbols Reward: 2 Gold, 1 Builder",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "sawmill",
+    "code": "Sawmill",
+    "name": "Sawmill",
+    "set": "developments",
+    "suit": "Development",
+    "gold": 2,
+    "food": 0,
+    "builder": 1,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/d10_1.png"
+    ],
+    "primary_image": "assets/cards/d10_1.png",
+    "description": "Condition: the most Wood Symbols Reward: 2 Gold, 1 Builder",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "windmill",
+    "code": "Windmill",
+    "name": "Windmill",
+    "set": "developments",
+    "suit": "Development",
+    "gold": 2,
+    "food": 1,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/d9_1.png"
+    ],
+    "primary_image": "assets/cards/d9_1.png",
+    "description": "Condition: the most Production Chains Reward: 2 Gold, 1 Food",
+    "clarification": "A Production Chain must have at least 2 cards to count as one. So the Solitary villagers for example are not included when checking who won the Windmill.",
+    "deviation": "On Yucata.de this card is not available in Solo Mode."
+  },
+  {
+    "id": "countess",
+    "code": "Countess",
+    "name": "Countess",
+    "set": "solo",
+    "suit": "SoloEvent",
+    "gold": 4,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/73_1.png",
+      "assets/cards/74_1.png"
+    ],
+    "primary_image": "assets/cards/73_1.png",
+    "description": "The Countess village begins with this card instead of a Founders . 4 Gold (except in Beginner Mode)",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "jester",
+    "code": "Jester",
+    "name": "Jester",
+    "set": "solo",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/jester_1.png"
+    ],
+    "primary_image": "assets/cards/jester_1.png",
+    "description": "Once per game, The Jester allows you to discard one Event Card of your choice.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "betrayer",
+    "code": "Betrayer",
+    "name": "Betrayer",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e11_1.png"
+    ],
+    "primary_image": "assets/cards/e11_1.png",
+    "description": "Event: Take a top villager from your village and move it to the Countess village . It cannot be a Basic villager.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "blackmarket",
+    "code": "BlackMarket",
+    "name": "Black Market",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "Event: You and the Countess score the Silver villagers in your villages.",
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e3_1.png"
+    ],
+    "primary_image": "assets/cards/e3_1.png",
+    "description": "Event: You and the Countess score the Silver villagers in your villages.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "bribes",
+    "code": "Bribes",
+    "name": "Bribes",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e7_1.png"
+    ],
+    "primary_image": "assets/cards/e7_1.png",
+    "description": "Event: The Countess adds Gold from the Bank to a villager with a keyring in her village . Add as much Gold as the number in the keyring.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "customs",
+    "code": "Customs",
+    "name": "Customs",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 1,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e9_1.png"
+    ],
+    "primary_image": "assets/cards/e9_1.png",
+    "description": "Event: Pay the Countess 1 Gold for each villager of the suit you have the most of.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "guildconspiracy",
+    "code": "GuildConspiracy",
+    "name": "Guild Conspiracy",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 2,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e10_1.png"
+    ],
+    "primary_image": "assets/cards/e10_1.png",
+    "description": "Event: The Countess adds 2 Gold from the Bank to each villager with a keyring in her village .",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "landclaim",
+    "code": "LandClaim",
+    "name": "Land Claim",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 2,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e5_1.png"
+    ],
+    "primary_image": "assets/cards/e5_1.png",
+    "description": "Event: Pay the Countess 2 Gold for each Basic villager in your village .",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "moodswing",
+    "code": "MoodSwing",
+    "name": "Mood Swing",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e2_1.png"
+    ],
+    "primary_image": "assets/cards/e2_1.png",
+    "description": "Event: Discard this Event, then deal a new Event from the same deck to replace it. Resolve the new Event immediately.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "serfdom",
+    "code": "Serfdom",
+    "name": "Serfdom",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e8_1.png"
+    ],
+    "primary_image": "assets/cards/e8_1.png",
+    "description": "In the Build Phase: Getting a Basic villager requires you to place a villager in the Countess village instead of returning it to the Road.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "sinisterbanquet",
+    "code": "SinisterBanquet",
+    "name": "Sinister Banquet",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 2,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e1_1.png"
+    ],
+    "primary_image": "assets/cards/e1_1.png",
+    "description": "Event: The Countess earns 2 Gold for each Food in her village .",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "temporaryemployment",
+    "code": "TemporaryEmployment",
+    "name": "Temporary Employment",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 2,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e6_1.png"
+    ],
+    "primary_image": "assets/cards/e6_1.png",
+    "description": "Event: The Countess earns 2 Gold for each different suit present in your hand .",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "thecountessbank",
+    "code": "TheCountessBank",
+    "name": "The Countess Bank",
+    "set": "solo",
+    "suit": "SoloEvent",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 1,
+    "images": [
+      "assets/cards/e12_1.png"
+    ],
+    "primary_image": "assets/cards/e12_1.png",
+    "description": "In the Build Phase: Unlocking by paying the Bank costs 3 Gold.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "valueaddedtax",
+    "code": "ValueAddedTax",
+    "name": "Value Added Tax",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 1,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e4_1.png"
+    ],
+    "primary_image": "assets/cards/e4_1.png",
+    "description": "Event: Pay the Countess 1 Gold for each Gold symbol in your village .",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "abduction",
+    "code": "Abduction",
+    "name": "Abduction",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e22_1.png"
+    ],
+    "primary_image": "assets/cards/e22_1.png",
+    "description": "Event: Discard a villager from your hand.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "arrest",
+    "code": "Arrest",
+    "name": "Arrest",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e23_1.png"
+    ],
+    "primary_image": "assets/cards/e23_1.png",
+    "description": "Event: Discard a top villager in your village. It cannot be a Basic villager.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "arson",
+    "code": "Arson",
+    "name": "Arson",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e15_1.png"
+    ],
+    "primary_image": "assets/cards/e15_1.png",
+    "description": "In the Build Phase: 1 less Build action or pay 3 Gold to the Bank.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "blackmail",
+    "code": "Blackmail",
+    "name": "Blackmail",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e21_1.png"
+    ],
+    "primary_image": "assets/cards/e21_1.png",
+    "description": "Event: The Countess scores the highest printed Gold value on a villager in your village .",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "conscription",
+    "code": "Conscription",
+    "name": "Conscription",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e16_1.png"
+    ],
+    "primary_image": "assets/cards/e16_1.png",
+    "description": "Event: The Countess takes an extra villager from a face-down stack on the Road or the Reserve.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "darkmood",
+    "code": "DarkMood",
+    "name": "Dark Mood",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e13_1.png"
+    ],
+    "primary_image": "assets/cards/e13_1.png",
+    "description": "Immediately when revealed: Discard this event and deal two new events to replace it.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "itwasyou",
+    "code": "ItWasYou",
+    "name": "-It Was You!",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e14_1.png"
+    ],
+    "primary_image": "assets/cards/e14_1.png",
+    "description": "The Jester must be played before the end of this round.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "protectionmoney",
+    "code": "ProtectionMoney",
+    "name": "Protection Money",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e18_1.png"
+    ],
+    "primary_image": "assets/cards/e18_1.png",
+    "description": "Event: Pay the Countess Gold equal to the value of the coins placed on one of your villagers.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "rats",
+    "code": "Rats",
+    "name": "Rats",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 3,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e24_1.png"
+    ],
+    "primary_image": "assets/cards/e24_1.png",
+    "description": "In the Draft Phase: Draft 1 less card or pay 3 Gold to the Bank.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "spynetwork",
+    "code": "SpyNetwork",
+    "name": "Spy Network",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "Event: The Countess earns the value of one of your Silver symbols.",
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e20_1.png"
+    ],
+    "primary_image": "assets/cards/e20_1.png",
+    "description": "Event: The Countess earns the value of one of your Silver symbols.",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "tradenetwork",
+    "code": "TradeNetwork",
+    "name": "Trade Network",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 0,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": "Event: The Countess scores the value of a Silver symbol in her village .",
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e19_1.png"
+    ],
+    "primary_image": "assets/cards/e19_1.png",
+    "description": "Event: The Countess scores the value of a Silver symbol in her village .",
+    "clarification": null,
+    "deviation": null
+  },
+  {
+    "id": "tribute",
+    "code": "Tribute",
+    "name": "Tribute",
+    "set": "base",
+    "suit": "SoloEvent",
+    "gold": 1,
+    "food": 0,
+    "builder": 0,
+    "silver_formula": null,
+    "production_chain": {
+      "placed_on": [],
+      "precedes": []
+    },
+    "padlock": {
+      "has_padlock": false,
+      "unlocked_by": null,
+      "unlocks": []
+    },
+    "deck_count": 2,
+    "images": [
+      "assets/cards/e17_1.png"
+    ],
+    "primary_image": "assets/cards/e17_1.png",
+    "description": "Event: Pay the Countess 1 Gold for each villager in your hand .",
+    "clarification": null,
+    "deviation": null
+  }
+]

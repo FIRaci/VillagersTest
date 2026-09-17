@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Drop Shadow -->
+    <filter id="foodShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+
+    <!-- Token Base Gradient -->
+    <radialGradient id="foodBase" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#2ecc71"/>
+      <stop offset="60%" stop-color="#1b7a43"/>
+      <stop offset="100%" stop-color="#0c3d20"/>
+    </radialGradient>
+
+    <!-- Wheat Golden Gradient -->
+    <linearGradient id="wheatGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff5a5"/>
+      <stop offset="40%" stop-color="#f4c430"/>
+      <stop offset="85%" stop-color="#c68a00"/>
+      <stop offset="100%" stop-color="#8a5a00"/>
+    </linearGradient>
+
+    <!-- Red Ribbon Gradient -->
+    <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7675"/>
+      <stop offset="50%" stop-color="#d63031"/>
+      <stop offset="100%" stop-color="#8a1415"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Tactile Token Circle -->
+  <circle cx="32" cy="33" r="28" fill="#082413" filter="url(#foodShadow)"/>
+  <circle cx="32" cy="32" r="28" fill="url(#foodBase)" stroke="#4cd97b" stroke-width="1.8"/>
+  <circle cx="32" cy="32" r="25" fill="none" stroke="#68f598" stroke-width="0.8" stroke-opacity="0.4" stroke-dasharray="2 2"/>
+
+  <!-- Wheat Ears Group -->
+  <g fill="url(#wheatGrad)" stroke="#6a4400" stroke-width="0.7" stroke-linejoin="round">
+    <!-- Center Wheat Stalk -->
+    <!-- Grains -->
+    <ellipse cx="32" cy="14" rx="3" ry="5.5" transform="rotate(0 32 14)"/>
+    <ellipse cx="29" cy="18" rx="2.8" ry="5" transform="rotate(-25 29 18)"/>
+    <ellipse cx="35" cy="18" rx="2.8" ry="5" transform="rotate(25 35 18)"/>
+    <ellipse cx="28.5" cy="24" rx="2.8" ry="5" transform="rotate(-30 28.5 24)"/>
+    <ellipse cx="35.5" cy="24" rx="2.8" ry="5" transform="rotate(30 35.5 24)"/>
+    <ellipse cx="29" cy="30" rx="2.6" ry="4.5" transform="rotate(-25 29 30)"/>
+    <ellipse cx="35" cy="30" rx="2.6" ry="4.5" transform="rotate(25 35 30)"/>
+    
+    <!-- Left Stalk Tips -->
+    <ellipse cx="21" cy="21" rx="2.5" ry="4.5" transform="rotate(-40 21 21)"/>
+    <ellipse cx="24.5" cy="26" rx="2.5" ry="4.5" transform="rotate(-35 24.5 26)"/>
+    <ellipse cx="18" cy="27" rx="2.2" ry="4" transform="rotate(-50 18 27)"/>
+
+    <!-- Right Stalk Tips -->
+    <ellipse cx="43" cy="21" rx="2.5" ry="4.5" transform="rotate(40 43 21)"/>
+    <ellipse cx="39.5" cy="26" rx="2.5" ry="4.5" transform="rotate(35 39.5 26)"/>
+    <ellipse cx="46" cy="27" rx="2.2" ry="4" transform="rotate(50 46 27)"/>
+
+    <!-- Whisker Awns (Beards of wheat) -->
+    <path d="M 32 10 L 32 6 M 29 14 L 24 8 M 35 14 L 40 8 M 20 18 L 14 13 M 44 18 L 50 13" stroke="#ffd966" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- Stems down to base -->
+    <path d="M 32 32 L 32 49 M 28 32 L 30 49 M 36 32 L 34 49" stroke="#c68a00" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- Red Harvest Ribbon Knot -->
+  <g filter="url(#foodShadow)">
+    <ellipse cx="32" cy="38" rx="6.5" ry="3.5" fill="url(#ribbonGrad)" stroke="#500002" stroke-width="0.8"/>
+    <!-- Ribbon tails -->
+    <path d="M 30 39 Q 27 45 24 48 Q 28 47 30 43 Z" fill="url(#ribbonGrad)" stroke="#500002" stroke-width="0.6"/>
+    <path d="M 34 39 Q 37 45 40 48 Q 36 47 34 43 Z" fill="url(#ribbonGrad)" stroke="#500002" stroke-width="0.6"/>
+    <circle cx="32" cy="38" r="2.2" fill="#ff7675" stroke="#500002" stroke-width="0.6"/>
+  </g>
+
+  <!-- Token Top Glare -->
+  <path d="M 14 26 A 25 25 0 0 1 50 26 C 42 30 22 30 14 26 Z" fill="#ffffff" opacity="0.18"/>
+</svg>

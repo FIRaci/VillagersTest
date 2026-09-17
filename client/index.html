@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0c0a09">
+  <title>Villagers - Mobile Player</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+    }
+
+    /* Lobby Screen */
+    #lobby-screen {
+      position: fixed;
+      inset: 0;
+      background-color: var(--bg-canvas);
+      background-image: radial-gradient(circle at 50% 20%, #ffffff 0%, #f7f5f0 65%, #ede9e0 100%);
+      z-index: 500;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-4);
+    }
+
+    .lobby-box {
+      width: 100%;
+      max-width: 380px;
+      padding: var(--space-6);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      background: #ffffff;
+      border: 1.5px solid var(--border-delicate);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 16px 36px rgba(42, 38, 34, 0.08);
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: var(--radius-md);
+      background: #ffffff;
+      border: 1.5px solid var(--border-delicate);
+      color: var(--text-primary);
+      font-size: 15px;
+      font-family: var(--font-ui);
+      outline: none;
+      transition: border-color var(--duration-fast), box-shadow var(--duration-fast);
+    }
+
+    .input-field:focus {
+      border-color: var(--border-accent);
+      box-shadow: 0 0 0 3px rgba(184, 107, 92, 0.15);
+    }
+
+    .color-picker {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-3);
+    }
+
+    .color-dot {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2.5px solid transparent;
+      transition: transform var(--duration-fast) var(--ease-spring), box-shadow var(--duration-fast);
+      box-shadow: 0 2px 5px rgba(42, 38, 34, 0.12);
+    }
+
+    .color-dot.selected {
+      border-color: #2a2622;
+      transform: scale(1.15);
+      box-shadow: 0 3px 8px rgba(42, 38, 34, 0.2);
+    }
+
+    /* Main Viewport */
+    .viewport {
+      flex: 1;
+      overflow-y: auto;
+      padding: 4px 8px;
+      position: relative;
+      -webkit-overflow-scrolling: touch;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Card Details Modal */
+    .card-modal-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-3);
+      text-align: center;
+    }
+
+    .modal-card-preview {
+      width: 150px;
+      aspect-ratio: 5 / 8;
+      border-radius: var(--radius-card);
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow-card);
+      border: 1.5px solid var(--border-delicate);
+    }
+
+    .padlock-card-box {
+      width: 100%;
+      border-radius: var(--radius-md);
+      padding: 8px 12px;
+      font-size: 12.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-align: left;
+    }
+
+    .padlock-card-box.locked {
+      background: #fdf2f2;
+      border: 1px solid #f1cfcf;
+      color: #a84242;
+    }
+
+    .padlock-card-box.unlocked {
+      background: var(--suit-wood-bg);
+      border: 1px solid var(--suit-wood-border);
+      color: var(--suit-wood);
+    }
+  </style>
+</head>
+<body class="duel-arena-layout">
+  <!-- Rotation Hint Overlay for Portrait Mobile -->
+  <div class="rotate-device-hint" id="rotate-hint">
+    <div class="rotate-phone-anim"></div>
+    <h3 style="color: var(--text-primary); font-size: 17px; margin-bottom: 8px;">XOAY NGANG ĐIỆN THOẠI</h3>
+    <p style="color: var(--text-secondary); font-size: 13px; max-width: 280px; line-height: 1.5; margin-bottom: 16px;">
+      Trải nghiệm bàn đấu <strong>Villagers TCG Duel</strong> xoay ngang chuẩn phong cách Yu-Gi-Oh! với Sân Đấu & Cây Công Nghệ toàn cảnh.
+    </p>
+    <button class="btn btn-secondary btn-sm" id="btn-dismiss-rotate" style="font-size: 12px; padding: 6px 14px;">
+      Vẫn chơi ở chế độ dọc
+    </button>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <!-- Join Lobby Screen -->
+  <div id="lobby-screen">
+    <div class="panel-elevated lobby-box">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <img src="/assets/icons/title.png" alt="Villagers" style="max-height: 48px; width: auto; filter: drop-shadow(0 2px 6px rgba(42,38,34,0.15));">
+        <p style="color: var(--text-secondary); font-size: 13px;">Gia nhập ván cờ với Máy chủ Host</p>
+      </div>
+
+      <input type="text" id="player-name-input" class="input-field" placeholder="Nhập tên của bạn..." maxlength="16" autocomplete="off">
+
+      <div>
+        <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;">Chọn màu đại diện:</div>
+        <div class="color-picker">
+          <div class="color-dot selected" style="background: #5e8ba3;" data-color="#5e8ba3"></div>
+          <div class="color-dot" style="background: #b86b5c;" data-color="#b86b5c"></div>
+          <div class="color-dot" style="background: #658a69;" data-color="#658a69"></div>
+          <div class="color-dot" style="background: #b58d3d;" data-color="#b58d3d"></div>
+          <div class="color-dot" style="background: #8c769f;" data-color="#8c769f"></div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="btn-join-lobby" style="padding: 12px; font-size: 14px; width: 100%;">VÀO BÀN CHƠI</button>
+    </div>
+  </div>
+
+  <!-- Unified Ultra-Compact Header Ribbon (38px) -->
+  <header class="mobile-hud duel-header-ribbon">
+    <!-- Left Zone: Identity & Phase -->
+    <div class="duel-header-left">
+      <div id="hud-avatar" class="duel-avatar-ring" style="background: #5e8ba3;"></div>
+      <strong id="hud-name" class="duel-player-name">Người chơi</strong>
+      <span id="hud-first-player" title="Đi trước" style="display: none; color: var(--badge-coin-text);"></span>
+      <span id="hud-turn-status" class="badge-turn" style="display: none;">LƯỢT BẠN</span>
+      <div class="duel-phase-banner" id="hud-phase-banner">
+        <span>DRAFT</span>
+      </div>
+    </div>
+
+    <!-- Center Zone: Integrated Segmented Navigation Tabs -->
+    <div class="nav-pill-container">
+      <div class="nav-pill active" id="tab-road"></div>
+      <div class="nav-pill" id="tab-village"></div>
+      <div class="nav-pill" id="tab-others"></div>
+    </div>
+
+    <!-- Right Zone: Resource Counters -->
+    <div class="duel-header-stats">
+      <button class="btn-theme-toggle" id="btn-theme-toggle" title="Đổi Bàn Trắng / Bàn Gỗ" style="display: none;">
+        <span id="theme-toggle-icon" style="display: inline-flex; align-items: center;"></span>
+        <span id="theme-toggle-text">BÀN TRẮNG</span>
+      </button>
+      <span class="badge-coin tabular-nums" id="hud-gold"></span>
+      <span class="badge-food tabular-nums" id="hud-food"></span>
+      <span class="badge-builder tabular-nums" id="hud-builder"></span>
+      <span class="badge-pill tabular-nums" id="hud-live-score" style="background: var(--badge-coin-bg); border: 1px solid var(--badge-coin-border); color: var(--badge-coin-text); font-weight: 800; cursor: pointer; padding: 2px 7px; font-size: 11px; display: flex; align-items: center; gap: 4px;" title="Xem bảng điểm trực tiếp">
+        <svg class="svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4a2 2 0 01-2-2V5a2 2 0 012-2h2M18 9h2a2 2 0 002-2V5a2 2 0 00-2-2h-2"/><path d="M6 3h12v7a6 6 0 01-12 0V3z" fill="#fae5b8" stroke="#b58d3d"/><path d="M12 16v4M8 20h8"/></svg>
+        <span id="hud-score-val">0</span>
+      </span>
+    </div>
+  </header>
+
+  <!-- Main Viewport Content -->
+  <div class="viewport" id="viewport">
+    <div id="view-road" class="mobile-road-wrapper"></div>
+    <div id="view-village" style="display: none;"></div>
+    <div id="view-others" style="display: none;"></div>
+  </div>
+
+  <!-- Ergonomic Hand Dock (96px Landscape) -->
+  <div class="hand-sheet duel-hand-dock" id="hand-sheet">
+    <div class="hand-count-pill" id="hand-count-label"></div>
+
+    <div class="hand-carousel duel-hand-cards-rack" id="hand-carousel">
+      <!-- Cards rendered here via Keyed Reconciliation -->
+    </div>
+
+    <!-- Right Command Hub -->
+    <div class="duel-command-hub" id="duel-command-hub">
+      <button class="btn-ai-advisor-trigger" id="btn-ai-advisor" title="Hỏi Cố Vấn Chiến Thuật AI">
+        <span class="ai-crystal-glow" style="display: inline-flex; align-items: center;">
+          <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 2a7 7 0 00-5 11.9v2.1a1 1 0 001 1h8a1 1 0 001-1v-2.1A7 7 0 0012 2z" fill="#fae5b8" stroke="#b58d3d"/><path d="M12 6v4M10 8h4" stroke="#8a681c"/></svg>
+        </span>
+        <span>CỐ VẤN AI</span>
+      </button>
+      <button class="btn-end-phase" id="btn-pass-turn" style="display: none;">
+        <span>KẾT THÚC</span>
+        <span style="font-size: 8.5px; opacity: 0.85;">LƯỢT (END)</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Card Action & Inspector Modal -->
+  <div class="modal-backdrop" id="card-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-card-name" style="color: var(--text-primary); font-size: 18px;">Tên thẻ</h3>
+        <button class="modal-close-btn" id="btn-close-card-modal-x" aria-label="Đóng">
+          <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="card-modal-body">
+        <div class="modal-card-preview" id="modal-card-img"></div>
+        <p id="modal-card-desc" style="color: var(--text-secondary); font-size: 13px;"></p>
+        
+        <!-- Padlock tree info -->
+        <div id="modal-padlock-info" class="padlock-card-box" style="display: none;"></div>
+
+        <!-- Target Parent Selector for Building -->
+        <div id="modal-parent-selector" style="display: none; width: 100%; text-align: left;">
+          <label style="font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; display: block; font-weight: 600;">ĐẶT LÊN DÂN LÀNG TRONG LÀNG BẠN:</label>
+          <select id="select-target-parent" class="input-field" style="padding: 10px; font-size: 14px;">
+          </select>
+        </div>
+
+        <div style="display: flex; gap: 8px; width: 100%; margin-top: 10px;">
+          <button class="btn" id="btn-inspect-modal-card" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 5px; font-size: 13px;">
+            <svg class="svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <span>Soi Thẻ</span>
+          </button>
+          <button class="btn" id="btn-close-card-modal" style="flex: 0.8;">Đóng</button>
+          <button class="btn btn-primary" id="btn-build-card" style="flex: 1.6;">XÂY VÀO LÀNG</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Live Score Breakdown Modal -->
+  <div class="modal-backdrop" id="mobile-score-modal">
+    <div class="modal-content" style="max-width: 420px; text-align: left;">
+      <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid var(--border-delicate); padding-bottom: 8px;">
+        <h3 style="color: var(--text-primary); font-size: 17px; margin: 0; display: flex; align-items: center; gap: 6px;">
+          <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4a2 2 0 01-2-2V5a2 2 0 012-2h2M18 9h2a2 2 0 002-2V5a2 2 0 00-2-2h-2"/><path d="M6 3h12v7a6 6 0 01-12 0V3z" fill="#fae5b8" stroke="#b58d3d"/><path d="M12 16v4M8 20h8"/></svg>
+          <span>BẢNG ĐIỂM TRỰC TIẾP</span>
+        </h3>
+        <button class="modal-close-btn" id="btn-close-mobile-score-x" aria-label="Đóng">
+          <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div id="mobile-score-body" style="display: flex; flex-direction: column; gap: 12px; max-height: 70vh; overflow-y: auto;">
+        <!-- Populated dynamically -->
+      </div>
+
+      <div style="margin-top: 14px; text-align: right;">
+        <button class="btn btn-primary" id="btn-close-mobile-score" style="width: 100%;">ĐÓNG</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="sfx.js"></script>
+  <script type="module" src="mobile.js"></script>
+</body>
+</html>

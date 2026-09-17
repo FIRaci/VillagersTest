@@ -1,0 +1,142 @@
+{
+  "name": "Villagers",
+  "author": "Haakon Hoel Gaarder",
+  "publisher": "Sinister Fish Games",
+  "players": {
+    "min": 1,
+    "max": 5,
+    "recommended": "2-4"
+  },
+  "setup_by_player_count": {
+    "2": {
+      "stacks_count": 6,
+      "cards_per_stack": 4,
+      "remove_suits": [
+        "Wool",
+        "Leather"
+      ],
+      "starting_hand": 5,
+      "starting_gold": 8,
+      "road_update_rule": "two_player_auction"
+    },
+    "3": {
+      "stacks_count": 6,
+      "cards_per_stack": 6,
+      "remove_suits": [
+        "Wool",
+        "Leather"
+      ],
+      "starting_hand": 5,
+      "starting_gold": 8,
+      "road_update_rule": "multiplayer_standard"
+    },
+    "4": {
+      "stacks_count": 6,
+      "cards_per_stack": 8,
+      "remove_suits": [],
+      "starting_hand": 5,
+      "starting_gold": 8,
+      "road_update_rule": "multiplayer_standard"
+    },
+    "5": {
+      "stacks_count": 6,
+      "cards_per_stack": 10,
+      "remove_suits": [],
+      "starting_hand": 5,
+      "starting_gold": 8,
+      "road_update_rule": "multiplayer_standard"
+    }
+  },
+  "limits": {
+    "base_draft": 2,
+    "max_draft": 5,
+    "draft_formula": "2 + food_in_village",
+    "base_build": 2,
+    "max_build": 5,
+    "build_formula": "2 + builder_in_village",
+    "max_basic_villagers_per_round": 3,
+    "padlock_cost": 2
+  },
+  "market_phases": {
+    "market_1": {
+      "trigger": "First two road stacks are empty (after build phase)",
+      "scores": [
+        "gold_on_top_cards",
+        "coins_on_cards"
+      ]
+    },
+    "market_2": {
+      "trigger": "All six road stacks are empty (after build phase)",
+      "scores": [
+        "gold_on_top_cards",
+        "coins_on_cards",
+        "silver_scoring_conditions"
+      ]
+    }
+  },
+  "suits": [
+    {
+      "id": "grain",
+      "name": "Grain",
+      "color": "#E6B800",
+      "icon": "assets/icons/s1.png",
+      "starter": "Founders"
+    },
+    {
+      "id": "wood",
+      "name": "Wood",
+      "color": "#7A5230",
+      "icon": "assets/icons/s2.png",
+      "starter": "Lumberjack"
+    },
+    {
+      "id": "hay",
+      "name": "Hay",
+      "color": "#D4A017",
+      "icon": "assets/icons/s3.png",
+      "starter": "Hayer"
+    },
+    {
+      "id": "ore",
+      "name": "Ore",
+      "color": "#708090",
+      "icon": "assets/icons/s4.png",
+      "starter": "Miner"
+    },
+    {
+      "id": "grapes",
+      "name": "Grapes",
+      "color": "#800080",
+      "icon": "assets/icons/s5.png",
+      "starter": "Vintner/Grape Picker"
+    },
+    {
+      "id": "wool",
+      "name": "Wool",
+      "color": "#4682B4",
+      "icon": "assets/icons/s6.png",
+      "starter": "Shepherd"
+    },
+    {
+      "id": "leather",
+      "name": "Leather",
+      "color": "#8B4513",
+      "icon": "assets/icons/s7.png",
+      "starter": "Tanner"
+    },
+    {
+      "id": "solitary",
+      "name": "Solitary",
+      "color": "#2E8B57",
+      "icon": "assets/icons/s8.png",
+      "starter": null
+    },
+    {
+      "id": "special",
+      "name": "Special",
+      "color": "#B22222",
+      "icon": "assets/icons/s9.png",
+      "starter": null
+    }
+  ]
+}
