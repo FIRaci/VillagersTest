@@ -280,21 +280,88 @@ wss.on('connection', (ws) => {
         } else if (act.type === 'adjust_gold') {
           gleamAction = new models.TabletopAct(new models.AdjustGoldArbitrary(act.playerId, act.delta));
         } else if (act.type === 'force_phase') {
-          let targetPhase;
-          if (act.phase === 'build') {
-            targetPhase = new models.BuildPhase(gameState.round, 0, 0, 0);
-          } else if (act.phase === 'draft') {
-            targetPhase = new models.DraftPhase(gameState.round, 0, 0);
-          } else if (act.phase === 'market1') {
-            targetPhase = new models.FirstMarketPhase(gameState.round);
-          } else if (act.phase === 'market2') {
-            targetPhase = new models.SecondMarketPhase(gameState.round);
+          if (act.phase === 'market1') {
+            // Evaluate Market 1 for all players, award gold, mark road.first_market_exhausted
+            const playersArr = gameState.players.toArray();
+            const updatedPlayers = playersArr.map(p => {
+              const score = market.evaluate_first_market(p);
+              return new models.Player(
+                p.id, p.name, p.color,
+                p.supply_gold + score.total_gained,
+                p.hand, p.village, p.village_square,
+                p.founders_flipped_to_food, p.is_connected
+              );
+            });
+            const newPlayers = toList(updatedPlayers);
+            const newRoad = new models.RoadState(
+              gameState.road.face_up, gameState.road.stacks,
+              true, gameState.road.second_market_exhausted
+            );
+            const nextRound = gameState.round + 1;
+            const nextFirst = (gameState.first_player_index + 1) % (updatedPlayers.length || 1);
+            const nextPhase = new models.DraftPhase(nextRound, nextFirst, 0);
+            gameState = new models.GameState(
+              gameState.id,
+              gameState.step + 1,
+              nextRound,
+              nextPhase,
+              nextFirst,
+              newPlayers,
+              newRoad,
+              gameState.reserve,
+              gameState.discard,
+              toList([gameState, ...gameState.history.toArray()])
+            );
+            saveAutosave();
+            broadcastState();
+            return;
+          } else if (act.phase === 'market2' || act.phase === 'ended') {
+            // Evaluate Market 2 (printed + coins + silver formulas) for all players, award gold, determine winner, set GameEnded
+            const playersArr = gameState.players.toArray();
+            const updatedPlayers = playersArr.map(p => {
+              const score = market.evaluate_second_market(p);
+              return new models.Player(
+                p.id, p.name, p.color,
+                p.supply_gold + score.total_gained,
+                p.hand, p.village, p.village_square,
+                p.founders_flipped_to_food, p.is_connected
+              );
+            });
+            const newPlayers = toList(updatedPlayers);
+            const newRoad = new models.RoadState(
+              gameState.road.face_up, gameState.road.stacks,
+              gameState.road.first_market_exhausted, true
+            );
+            const winner = market.determine_winner(newPlayers);
+            const nextPhase = new models.GameEnded(winner);
+            gameState = new models.GameState(
+              gameState.id,
+              gameState.step + 1,
+              gameState.round,
+              nextPhase,
+              gameState.first_player_index,
+              newPlayers,
+              newRoad,
+              gameState.reserve,
+              gameState.discard,
+              toList([gameState, ...gameState.history.toArray()])
+            );
+            saveAutosave();
+            broadcastState();
+            return;
           } else {
-            targetPhase = (gameState.phase instanceof models.DraftPhase)
-              ? new models.BuildPhase(gameState.round, 0, 0, 0)
-              : new models.DraftPhase(gameState.round + 1, 0, 0);
+            let targetPhase;
+            if (act.phase === 'build') {
+              targetPhase = new models.BuildPhase(gameState.round, 0, 0, 0);
+            } else if (act.phase === 'draft') {
+              targetPhase = new models.DraftPhase(gameState.round, 0, 0);
+            } else {
+              targetPhase = (gameState.phase instanceof models.DraftPhase)
+                ? new models.BuildPhase(gameState.round, 0, 0, 0)
+                : new models.DraftPhase(gameState.round + 1, 0, 0);
+            }
+            gleamAction = new models.TabletopAct(new models.ForcePhase(targetPhase));
           }
-          gleamAction = new models.TabletopAct(new models.ForcePhase(targetPhase));
         } else if (act.type === 'reset_game') {
           initGameSession();
           broadcastState();

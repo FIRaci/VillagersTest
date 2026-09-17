@@ -323,10 +323,18 @@ function updateUI(state) {
 
   // Phase banner indicator
   if (hudPhaseBanner && state.phase) {
-    const isDraft = state.phase.type === 'DraftPhase' || ('drafted_this_round' in state.phase);
-    hudPhaseBanner.innerHTML = isDraft
-      ? `<span>${getIcon('draftPhase', { size: 13, style: 'vertical-align: -1px;' })} NHÁP BÀI (VÒNG ${state.phase.draft_round || 1}/2)</span>`
-      : `<span>${getIcon('buildPhase', { size: 13, style: 'vertical-align: -1px;' })} XÂY DỰNG</span>`;
+    if (state.phase.type === 'ended') {
+      hudPhaseBanner.innerHTML = `<span style="color: #7a5a14; font-weight: 800;">${getIcon('trophy', { size: 13, style: 'vertical-align: -1px;' })} VÁN ĐẤU KẾT THÚC</span>`;
+    } else if (state.phase.type === 'first_market') {
+      hudPhaseBanner.innerHTML = `<span style="color: #7a5a14; font-weight: 800;">${getIcon('coin', { size: 13, style: 'vertical-align: -1px;' })} CHỢ LẦN 1 (TÍNH ĐIỂM)</span>`;
+    } else if (state.phase.type === 'second_market') {
+      hudPhaseBanner.innerHTML = `<span style="color: #7a5a14; font-weight: 800;">${getIcon('trophy', { size: 13, style: 'vertical-align: -1px;' })} CHỢ LẦN 2 (CHUNG CUỘC)</span>`;
+    } else {
+      const isDraft = state.phase.type === 'draft' || state.phase.type === 'DraftPhase' || ('drafted_this_round' in state.phase);
+      hudPhaseBanner.innerHTML = isDraft
+        ? `<span>${getIcon('draftPhase', { size: 13, style: 'vertical-align: -1px;' })} NHÁP BÀI (VÒNG ${state.phase.draft_round || 1}/2)</span>`
+        : `<span>${getIcon('buildPhase', { size: 13, style: 'vertical-align: -1px;' })} XÂY DỰNG</span>`;
+    }
   }
 
   // First player indicator
@@ -334,8 +342,9 @@ function updateUI(state) {
   hudFirstPlayer.style.display = isFirst ? 'inline-block' : 'none';
 
   // Turn status
-  const activePlayer = state.players[state.phase.active_player_index || 0];
-  const isMyTurn = activePlayer && activePlayer.id === myPlayerId;
+  const isGameEnded = state.phase && state.phase.type === 'ended';
+  const activePlayer = !isGameEnded && state.players[state.phase.active_player_index || 0];
+  const isMyTurn = Boolean(activePlayer && activePlayer.id === myPlayerId);
   btnPassTurn.style.display = isMyTurn ? 'inline-flex' : 'none';
   if (isMyTurn) {
     btnPassTurn.classList.add('my-turn-active');
@@ -343,6 +352,14 @@ function updateUI(state) {
     btnPassTurn.classList.remove('my-turn-active');
   }
   hudTurnStatus.style.display = isMyTurn ? 'inline-block' : 'none';
+
+  if (isGameEnded) {
+    showGameOverModal(state);
+  } else {
+    gameOverDismissed = false;
+    const modal = document.getElementById('mobile-game-over-modal');
+    if (modal) modal.classList.remove('open');
+  }
 
   // Keyed DOM Reconciliation for Hand Carousel
   reconcileHandCarousel(me.hand, me, state);
@@ -1130,6 +1147,111 @@ function showToast(msg) {
   toast.innerHTML = `${getIcon('sparkles', { size: 16 })} <span>${msg}</span>`;
   container.appendChild(toast);
   setTimeout(() => toast.remove(), 3200);
+}
+
+let gameOverDismissed = false;
+
+function showGameOverModal(state) {
+  const modal = document.getElementById('mobile-game-over-modal');
+  if (!modal || gameOverDismissed) return;
+
+  const winnerCard = document.getElementById('game-over-winner-card');
+  const standingsTable = document.getElementById('game-over-standings-table');
+  const btnClose = document.getElementById('btn-close-game-over');
+  const btnPlayAgain = document.getElementById('btn-game-over-play-again');
+
+  const players = [...state.players].sort((a, b) => {
+    if (b.supply_gold !== a.supply_gold) return b.supply_gold - a.supply_gold;
+    return (b.village ? b.village.length : 0) - (a.village ? a.village.length : 0);
+  });
+
+  const winnerId = (state.phase && state.phase.winner_id) || (players[0] && players[0].id);
+  const winner = players.find(p => p.id === winnerId) || players[0];
+  const isMeWinner = winner && winner.id === myPlayerId;
+
+  if (winnerCard && winner) {
+    winnerCard.innerHTML = `
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <div style="width: 28px; height: 28px; border-radius: 50%; background: ${winner.color || '#3498db'}; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 13px;">
+            ${winner.name ? winner.name.charAt(0) : 'P'}
+          </div>
+          <div style="text-align: left;">
+            <div style="font-size: 11px; font-weight: 700; color: #7a5a14; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 4px;">
+              ${getIcon('crown', { size: 14 })} <span>QUÁN QUÂN LÀNG XÓM</span>
+            </div>
+            <div style="font-size: 16px; font-weight: 800; color: var(--text-primary);">${winner.name} ${isMeWinner ? '(BẠN CHIẾN THẮNG!)' : ''}</div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 4px; background: #fdf6e7; border: 1.5px solid #dfc282; border-radius: 20px; padding: 4px 10px;">
+          <img src="/assets/icons/gold_coin.svg" style="width: 16px; height: 16px;" alt="Gold">
+          <span style="font-size: 16px; font-weight: 900; color: #7a5a14;">${winner.supply_gold}</span>
+        </div>
+      </div>
+      <div style="font-size: 12px; color: var(--text-secondary); text-align: left; background: #faf8f5; border-radius: 6px; padding: 6px 10px; display: flex; justify-content: space-between;">
+        <span>Tổng số dân làng định cư:</span>
+        <strong style="color: var(--text-primary);">${winner.village ? winner.village.length : 0} cư dân</strong>
+      </div>
+    `;
+  }
+
+  if (standingsTable) {
+    standingsTable.innerHTML = `
+      <div style="font-size: 11px; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.04em;">
+        BẢNG TỔNG SẮP CHUNG CUỘC
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        ${players.map((p, idx) => {
+          const isMe = p.id === myPlayerId;
+          const isWinner = idx === 0;
+          return `
+            <div style="display: flex; justify-content: space-between; align-items: center; background: ${isWinner ? '#fdf6e7' : (isMe ? '#f5f8fa' : '#ffffff')}; border: 1.5px solid ${isWinner ? '#dfc282' : (isMe ? '#a2c8e0' : 'var(--border-delicate)')}; border-radius: 8px; padding: 8px 12px;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-weight: 800; font-size: 13px; color: ${isWinner ? '#b58d3d' : 'var(--text-secondary)'}; width: 22px;">
+                  ${isWinner ? getIcon('trophy', { size: 15, style: 'vertical-align: -2px;' }) : `#${idx + 1}`}
+                </span>
+                <div style="width: 12px; height: 12px; border-radius: 50%; background: ${p.color || '#5e8ba3'};"></div>
+                <div>
+                  <strong style="font-size: 13.5px; color: var(--text-primary);">${p.name} ${isMe ? '<span style="font-size: 11px; color: var(--text-muted);">(Bạn)</span>' : ''}</strong>
+                  <div style="font-size: 10.5px; color: var(--text-muted);">${p.village ? p.village.length : 0} thẻ bài trong làng</div>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 4px;">
+                <img src="/assets/icons/gold_coin.svg" style="width: 14px; height: 14px;" alt="Gold">
+                <span style="font-weight: 900; font-size: 15px; color: ${isWinner ? '#7a5a14' : 'var(--text-primary)'};">${p.supply_gold}</span>
+              </div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+  }
+
+  if (btnClose && !btnClose.__bound) {
+    btnClose.__bound = true;
+    btnClose.addEventListener('click', () => {
+      gameOverDismissed = true;
+      modal.classList.remove('open');
+      audio.playButtonClick();
+    });
+  }
+
+  if (btnPlayAgain && !btnPlayAgain.__bound) {
+    btnPlayAgain.__bound = true;
+    btnPlayAgain.addEventListener('click', () => {
+      audio.playShuffleSound();
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        ws.send(JSON.stringify({
+          type: 'TABLETOP_ACTION',
+          action: { type: 'reset_game' }
+        }));
+      }
+      gameOverDismissed = false;
+      modal.classList.remove('open');
+    });
+  }
+
+  modal.classList.add('open');
 }
 
 connectWebSocket();

@@ -240,6 +240,40 @@
     </div>
   </div>
 
+  <!-- Host Game Over Victory Podium Modal -->
+  <div class="modal-backdrop" id="host-game-over-modal">
+    <div class="modal-content" style="max-width: 640px; text-align: center; padding: 26px 28px;">
+      <div style="display: flex; justify-content: center; margin-bottom: 12px;">
+        <div style="width: 58px; height: 58px; border-radius: 50%; background: #fdf6e7; border: 2px solid #dfc282; display: flex; align-items: center; justify-content: center;">
+          <svg class="svg-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#b58d3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9H4a2 2 0 01-2-2V5a2 2 0 012-2h2M18 9h2a2 2 0 002-2V5a2 2 0 00-2-2h-2"/>
+            <path d="M6 3h12v7a6 6 0 01-12 0V3z" fill="#fae5b8"/>
+            <path d="M12 16v4M8 20h8"/>
+          </svg>
+        </div>
+      </div>
+      <h2 style="font-size: 21px; font-weight: 800; color: var(--text-primary); margin: 0 0 6px 0; letter-spacing: 0.02em;">
+        CHUNG CUỘC: LỄ TRAO CÚP QUÁN QUÂN
+      </h2>
+      <p style="font-size: 13px; color: var(--text-secondary); margin: 0 0 18px 0;">
+        Ván đấu đã kết thúc hoàn hảo. Điểm số Chợ 1, Chợ 2 và các Thẻ Bạc đã được trọng tài tổng kết:
+      </p>
+
+      <div id="host-winner-spotlight" style="background: #ffffff; border: 2px solid #dfc282; border-radius: var(--radius-lg); padding: 16px; margin-bottom: 18px; box-shadow: 0 6px 20px rgba(181, 141, 61, 0.12);">
+        <!-- Winner Podium details dynamically rendered -->
+      </div>
+
+      <div id="host-leaderboard-container" style="margin-bottom: 20px; text-align: left;">
+        <!-- Full standings table dynamically rendered -->
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 12px;">
+        <button class="btn" id="btn-close-host-game-over" style="padding: 10px 22px;">XEM BÀN CHƠI</button>
+        <button class="btn btn-primary" id="btn-host-reset-play-again" style="padding: 10px 26px;">BẮT ĐẦU VÁN MỚI</button>
+      </div>
+    </div>
+  </div>
+
   <script src="sfx.js"></script>
   <script type="module" src="host.js"></script>
 </body>

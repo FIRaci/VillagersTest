@@ -308,6 +308,42 @@
     </div>
   </div>
 
+  <!-- Mobile Game Over Victory Modal -->
+  <div class="modal-backdrop" id="mobile-game-over-modal">
+    <div class="modal-content" style="max-width: 480px; max-height: 92vh; overflow-y: auto; text-align: center; padding: 14px 16px;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 8px;">
+        <div style="width: 36px; height: 36px; border-radius: 50%; background: #fdf6e7; border: 1.5px solid #dfc282; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b58d3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9H4a2 2 0 01-2-2V5a2 2 0 012-2h2M18 9h2a2 2 0 002-2V5a2 2 0 00-2-2h-2"/>
+            <path d="M6 3h12v7a6 6 0 01-12 0V3z" fill="#fae5b8"/>
+            <path d="M12 16v4M8 20h8"/>
+          </svg>
+        </div>
+        <div style="text-align: left;">
+          <h2 style="font-size: 16px; font-weight: 800; color: var(--text-primary); margin: 0; letter-spacing: 0.02em;">
+            VÁN ĐẤU ĐÃ KẾT THÚC!
+          </h2>
+          <p id="game-over-subtitle" style="font-size: 11px; color: var(--text-secondary); margin: 0;">
+            Đã hoàn tất tính điểm Chợ Chung Cuộc và các thẻ Bạc.
+          </p>
+        </div>
+      </div>
+
+      <div id="game-over-winner-card" style="background: #ffffff; border: 1.5px solid #dfc282; border-radius: var(--radius-md); padding: 8px 12px; margin-bottom: 8px; box-shadow: 0 3px 10px rgba(181, 141, 61, 0.1);">
+        <!-- Winner spotlight dynamically rendered -->
+      </div>
+
+      <div id="game-over-standings-table" style="margin-bottom: 10px; text-align: left;">
+        <!-- Standings dynamically rendered -->
+      </div>
+
+      <div style="display: flex; gap: 8px;">
+        <button class="btn" id="btn-close-game-over" style="flex: 1; padding: 7px 12px; font-size: 12px;">XEM BÀN CHƠI</button>
+        <button class="btn btn-primary" id="btn-game-over-play-again" style="flex: 1.4; padding: 7px 14px; font-size: 12px;">CHƠI VÁN MỚI</button>
+      </div>
+    </div>
+  </div>
+
   <script src="sfx.js"></script>
   <script type="module" src="mobile.js"></script>
 </body>

@@ -32,7 +32,7 @@ pub fn evaluate_first_market(player: Player) -> MarketScoreDetail {
 pub fn evaluate_silver_bonus(player: Player) -> Int {
   let top_cards = chains.get_top_villagers(player.village)
   let total_food = chains.calculate_food_limit(player) - 2
-  let total_builders = chains.calculate_builder_limit(player) - 2
+  let total_builders = chains.calculate_build_limit(player) - 2
   let total_padlocks = list.count(player.village, fn(c) { c.has_padlock })
   let total_printed_gold_top = list.fold(top_cards, 0, fn(acc, c) { acc + c.gold })
 
